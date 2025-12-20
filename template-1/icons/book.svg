@@ -1,0 +1,22 @@
+<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Storytelling & Mythos - Ancient Cosmic Tome -->
+  <defs>
+    <linearGradient id="bookGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#d4a84b;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#4ecdc4;stop-opacity:0.5" />
+    </linearGradient>
+  </defs>
+  <circle cx="20" cy="20" r="18" fill="url(#bookGlow)" opacity="0.15"/>
+  <!-- Book outline -->
+  <rect x="12" y="10" width="16" height="20" rx="1" stroke="#d4a84b" stroke-width="2" fill="none"/>
+  <!-- Book spine -->
+  <line x1="16" y1="10" x2="16" y2="30" stroke="#4ecdc4" stroke-width="1.5"/>
+  <!-- Mystical symbols on pages -->
+  <circle cx="22" cy="16" r="1.5" fill="#4ecdc4" opacity="0.7"/>
+  <path d="M22 20 L24 22 L26 20" stroke="#4ecdc4" stroke-width="1" fill="none" opacity="0.6"/>
+  <line x1="20" y1="25" x2="26" y2="25" stroke="#d4a84b" stroke-width="1" opacity="0.5"/>
+  <line x1="20" y1="27" x2="24" y2="27" stroke="#d4a84b" stroke-width="1" opacity="0.5"/>
+  <!-- Glowing corner accents -->
+  <path d="M12 10 L14 10 L14 12" stroke="#4ecdc4" stroke-width="0.8" opacity="0.8"/>
+  <path d="M28 10 L26 10 L26 12" stroke="#4ecdc4" stroke-width="0.8" opacity="0.8"/>
+</svg>

@@ -300,6 +300,70 @@ em {
 }
 
 /* ============================================
+   ICONS - Cosmic SVG Styling
+   ============================================ */
+.icon {
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    vertical-align: middle;
+    filter: drop-shadow(0 0 8px rgba(78, 205, 196, 0.4));
+    transition: all 0.3s ease;
+}
+
+.icon:hover {
+    filter: drop-shadow(0 0 15px rgba(212, 168, 75, 0.6));
+    transform: scale(1.1);
+}
+
+/* Icon size variants */
+.icon-sm {
+    width: 24px;
+    height: 24px;
+}
+
+.icon-md {
+    width: 32px;
+    height: 32px;
+}
+
+.icon-lg {
+    width: 48px;
+    height: 48px;
+}
+
+.icon-xl {
+    width: 64px;
+    height: 64px;
+}
+
+/* Inline icons within text */
+.icon-inline {
+    width: 1.2em;
+    height: 1.2em;
+    margin: 0 0.2em;
+    vertical-align: -0.2em;
+}
+
+/* Guild/section header icons */
+h2 .icon,
+h3 .icon {
+    margin-right: 0.5rem;
+}
+
+/* Summary grid icons */
+.summary-number .icon {
+    width: 48px;
+    height: 48px;
+    filter: drop-shadow(0 0 12px rgba(212, 168, 75, 0.5));
+}
+
+/* Logo icon in header */
+.logo-icon .icon {
+    filter: drop-shadow(0 0 20px rgba(212, 168, 75, 0.8));
+}
+
+/* ============================================
    BUTTONS
    ============================================ */
 .btn-primary {

@@ -1,0 +1,29 @@
+<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Earth / Planetary - Living Planet -->
+  <defs>
+    <radialGradient id="earthGlow" cx="50%" cy="50%">
+      <stop offset="0%" style="stop-color:#4ecdc4;stop-opacity:0.8" />
+      <stop offset="60%" style="stop-color:#1a6b5c;stop-opacity:0.6" />
+      <stop offset="100%" style="stop-color:#0d4a4a;stop-opacity:0.4" />
+    </radialGradient>
+  </defs>
+  <!-- Outer glow -->
+  <circle cx="20" cy="20" r="18" fill="url(#earthGlow)" opacity="0.3"/>
+  <!-- Planet circle -->
+  <circle cx="20" cy="20" r="12" fill="none" stroke="#4ecdc4" stroke-width="2"/>
+  <!-- Landmasses (organic shapes) -->
+  <path d="M15 14 Q17 13, 19 14 Q20 15, 18 16 Q16 16, 15 14 Z" fill="#1a6b5c" opacity="0.6"/>
+  <path d="M22 17 Q24 16, 26 18 Q27 20, 25 21 Q23 21, 22 19 Z" fill="#1a6b5c" opacity="0.6"/>
+  <path d="M14 22 Q16 21, 18 23 Q18 25, 16 25 Q14 24, 14 22 Z" fill="#1a6b5c" opacity="0.6"/>
+  <!-- Energy meridians -->
+  <path d="M20 8 Q15 12, 20 20 Q25 12, 20 8" stroke="#d4a84b" stroke-width="0.8" fill="none" opacity="0.5"/>
+  <path d="M8 20 Q15 22, 20 20 Q15 18, 8 20" stroke="#d4a84b" stroke-width="0.8" fill="none" opacity="0.5"/>
+  <path d="M32 20 Q25 22, 20 20 Q25 18, 32 20" stroke="#d4a84b" stroke-width="0.8" fill="none" opacity="0.5"/>
+  <!-- Sacred points -->
+  <circle cx="20" cy="12" r="1" fill="#d4a84b" opacity="0.9"/>
+  <circle cx="14" cy="20" r="1" fill="#4ecdc4" opacity="0.8"/>
+  <circle cx="26" cy="20" r="1" fill="#4ecdc4" opacity="0.8"/>
+  <circle cx="20" cy="28" r="1" fill="#d4a84b" opacity="0.9"/>
+  <!-- Orbital ring -->
+  <circle cx="20" cy="20" r="15" stroke="#4ecdc4" stroke-width="0.5" opacity="0.3" fill="none"/>
+</svg>
