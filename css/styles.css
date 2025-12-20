@@ -506,6 +506,28 @@ h3 .icon {
     flex-wrap: wrap;
 }
 
+/* Subpage Hero - Consistent header for all pages except home */
+.hero-subpage {
+    min-height: calc(50vh + 200px);
+    height: calc(50vh + 200px);
+    align-items: center;
+    text-align: center;
+    padding: 8rem 5% 3rem 5%;
+}
+
+.hero-subpage .hero-content {
+    max-width: 800px;
+}
+
+.hero-subpage .hero-subtitle,
+.hero-subpage .hero-description {
+    margin: 0 auto 1rem;
+}
+
+.hero-subpage .hero-cta-group {
+    justify-content: center;
+}
+
 /* ============================================
    VISUAL ELEMENTS
    ============================================ */
@@ -2020,5 +2042,112 @@ footer {
         flex-direction: column;
         gap: 0.5rem;
         align-items: center;
+    }
+}
+
+/* ============================================
+   GUILDS PAGE MOBILE OPTIMIZATION
+   ============================================ */
+@media (max-width: 768px) {
+    /* Force 1-column layout for guilds grid */
+    .guilds-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1rem;
+        max-width: 100%;
+    }
+
+    .summary-item {
+        padding: 1.25rem;
+    }
+
+    .summary-number {
+        font-size: 2rem;
+    }
+
+    .summary-number .icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .summary-label {
+        font-size: 1rem;
+    }
+
+    /* Accordion mobile improvements */
+    .accordion-header {
+        flex-wrap: wrap;
+    }
+
+    .accordion-header > div {
+        flex: 1;
+        min-width: 0;
+    }
+
+    .accordion-title {
+        font-size: 1.1rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+    }
+
+    .accordion-title .icon {
+        width: 24px;
+        height: 24px;
+        flex-shrink: 0;
+    }
+
+    .accordion-number {
+        width: 32px;
+        height: 32px;
+        font-size: 1rem;
+        flex-shrink: 0;
+    }
+
+    .accordion-content h4 {
+        font-size: 1.1rem;
+        margin-top: 1.5rem;
+    }
+
+    .accordion-content ul {
+        padding-left: 1.25rem;
+    }
+
+    .accordion-content li {
+        margin-bottom: 0.5rem;
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .guilds-grid {
+        gap: 0.75rem;
+    }
+
+    .summary-item {
+        padding: 1rem;
+    }
+
+    .summary-number {
+        font-size: 1.75rem;
+    }
+
+    .summary-number .icon {
+        width: 32px;
+        height: 32px;
+    }
+
+    .summary-label {
+        font-size: 0.9rem;
+    }
+
+    .accordion-title {
+        font-size: 1rem;
+    }
+
+    .accordion-number {
+        width: 28px;
+        height: 28px;
+        font-size: 0.9rem;
     }
 }
