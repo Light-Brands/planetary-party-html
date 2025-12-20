@@ -58,36 +58,284 @@
         </svg>
     </div>
 
-    <!-- New Myth Section -->
+    <!-- New Myth Section - Interactive Mind Map -->
     <section class="section" id="vision">
         <div class="container">
             <h2 class="section-title">A New Myth of Humanity Is Emerging</h2>
             <p class="section-intro">
-                The old story of extraction, separation, and endless growth is dissolving.
-                A new narrative is being born: humanity as a regenerative species, celebrating
-                our interdependence with all life, creating abundance through coherence.
+                The old story is dissolving. A new narrative is being born: humanity as a regenerative species,
+                celebrating our interdependence with all life, creating abundance through coherence.
             </p>
 
-            <div class="image-text-section">
-                <div>
-                    <h3 style="color: var(--soft-cyan); font-size: 2rem; margin-bottom: 1rem;">
-                        From Extraction to Regeneration
-                    </h3>
-                    <p style="color: rgba(245, 242, 232, 0.85); margin-bottom: 1rem;">
-                        Everywhere, the mycelial networks of regeneration are spreading beneath the surface.
-                        Communities are growing food, restoring land, building new economies, experimenting with
-                        governance, creating art that heals.
-                    </p>
-                    <p style="color: rgba(245, 242, 242, 0.85);">
-                        Yet these efforts remain fragmented, isolated, underresourced. The missing piece is
-                        <strong style="color: var(--gold);">coherence</strong>. The living architecture that allows
-                        us to sense together, see together, and flow resources toward what works.
-                    </p>
-                </div>
-                <div>
-                    <div class="glowing-mandala"></div>
+            <!-- Interactive Mind Map -->
+            <div class="mind-map-container">
+                <svg class="mind-map-svg" viewBox="0 0 1000 650" preserveAspectRatio="xMidYMid meet">
+                    <!-- Definitions for gradients, filters, and effects -->
+                    <defs>
+                        <!-- Core glow filter -->
+                        <filter id="coreGlow" x="-50%" y="-50%" width="200%" height="200%">
+                            <feGaussianBlur stdDeviation="8" result="coloredBlur"/>
+                            <feMerge>
+                                <feMergeNode in="coloredBlur"/>
+                                <feMergeNode in="coloredBlur"/>
+                                <feMergeNode in="SourceGraphic"/>
+                            </feMerge>
+                        </filter>
+
+                        <!-- Node glow filter -->
+                        <filter id="nodeGlow" x="-50%" y="-50%" width="200%" height="200%">
+                            <feGaussianBlur stdDeviation="4" result="blur"/>
+                            <feMerge>
+                                <feMergeNode in="blur"/>
+                                <feMergeNode in="SourceGraphic"/>
+                            </feMerge>
+                        </filter>
+
+                        <!-- Main path gradient -->
+                        <linearGradient id="mainPathGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" style="stop-color:#d4a84b;stop-opacity:0.8"/>
+                            <stop offset="50%" style="stop-color:#4ecdc4;stop-opacity:0.9"/>
+                            <stop offset="100%" style="stop-color:#d4a84b;stop-opacity:0.8"/>
+                        </linearGradient>
+
+                        <!-- Secondary path gradient -->
+                        <linearGradient id="secondaryPathGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" style="stop-color:#4ecdc4;stop-opacity:0.6"/>
+                            <stop offset="100%" style="stop-color:#6ee7e0;stop-opacity:0.4"/>
+                        </linearGradient>
+
+                        <!-- Radial gradient for core -->
+                        <radialGradient id="coreGradient" cx="50%" cy="50%" r="50%">
+                            <stop offset="0%" style="stop-color:#f5c542"/>
+                            <stop offset="60%" style="stop-color:#d4a84b"/>
+                            <stop offset="100%" style="stop-color:#1a6b5c"/>
+                        </radialGradient>
+
+                        <!-- Emerging node gradient -->
+                        <radialGradient id="emergingGradient" cx="50%" cy="50%" r="50%">
+                            <stop offset="0%" style="stop-color:#6ee7e0"/>
+                            <stop offset="100%" style="stop-color:#4ecdc4"/>
+                        </radialGradient>
+
+                        <!-- Dissolving node gradient -->
+                        <radialGradient id="dissolvingGradient" cx="50%" cy="50%" r="50%">
+                            <stop offset="0%" style="stop-color:#8b5a5a"/>
+                            <stop offset="100%" style="stop-color:#5a3a3a"/>
+                        </radialGradient>
+                    </defs>
+
+                    <!-- Background subtle mycelium pattern -->
+                    <g class="background-pattern" opacity="0.15">
+                        <path d="M100,325 Q200,280 300,320 T500,300 T700,340 T900,300" stroke="#4ecdc4" fill="none" stroke-width="0.5"/>
+                        <path d="M50,400 Q150,360 250,390 T450,370 T650,410 T850,380" stroke="#4ecdc4" fill="none" stroke-width="0.5"/>
+                        <path d="M150,250 Q250,220 350,260 T550,240 T750,280" stroke="#d4a84b" fill="none" stroke-width="0.5"/>
+                    </g>
+
+                    <!-- Connecting paths from old story to center (dissolving) -->
+                    <g class="connection-paths">
+                        <!-- Old story paths (fading) -->
+                        <path class="mycelial-path path-old-story" d="M120,150 Q200,200 350,280 Q420,310 500,325"/>
+                        <path class="mycelial-path path-old-story" d="M80,325 Q180,325 350,325 Q420,325 500,325"/>
+                        <path class="mycelial-path path-old-story" d="M120,500 Q200,450 350,370 Q420,340 500,325"/>
+
+                        <!-- Main connections to new story (glowing) -->
+                        <path class="mycelial-path path-main path-flowing" d="M500,325 Q580,280 650,200 Q720,150 780,120"/>
+                        <path class="mycelial-path path-main path-flowing" d="M500,325 Q600,325 700,325 Q800,325 880,325"/>
+                        <path class="mycelial-path path-main path-flowing" d="M500,325 Q580,370 650,450 Q720,500 780,530"/>
+
+                        <!-- Protocol action connections -->
+                        <path class="mycelial-path path-secondary path-flowing" d="M500,325 Q450,200 380,150"/>
+                        <path class="mycelial-path path-secondary path-flowing" d="M500,325 Q550,200 620,150"/>
+                        <path class="mycelial-path path-secondary path-flowing" d="M500,325 Q450,450 380,500"/>
+                        <path class="mycelial-path path-secondary path-flowing" d="M500,325 Q550,450 620,500"/>
+
+                        <!-- Architecture connections -->
+                        <path class="mycelial-path path-secondary" d="M780,120 Q850,180 900,200"/>
+                        <path class="mycelial-path path-secondary" d="M880,325 Q920,280 950,250"/>
+                        <path class="mycelial-path path-secondary" d="M780,530 Q850,480 920,450"/>
+                    </g>
+
+                    <!-- OLD STORY NODES (Left side, dissolving) -->
+                    <g class="old-story-nodes">
+                        <!-- Extraction -->
+                        <g class="mind-map-node old-story-node" data-node-id="extraction" tabindex="0">
+                            <circle class="node-circle" cx="120" cy="150" r="48" fill="url(#dissolvingGradient)" opacity="0.6"/>
+                            <text class="node-label" x="120" y="145" font-size="13">Extraction</text>
+                            <text class="node-sublabel" x="120" y="164">taking without giving</text>
+                        </g>
+
+                        <!-- Separation -->
+                        <g class="mind-map-node old-story-node" data-node-id="separation" tabindex="0">
+                            <circle class="node-circle" cx="80" cy="325" r="48" fill="url(#dissolvingGradient)" opacity="0.6"/>
+                            <text class="node-label" x="80" y="320" font-size="13">Separation</text>
+                            <text class="node-sublabel" x="80" y="339">us vs them</text>
+                        </g>
+
+                        <!-- Endless Growth -->
+                        <g class="mind-map-node old-story-node" data-node-id="endless-growth" tabindex="0">
+                            <circle class="node-circle" cx="120" cy="500" r="48" fill="url(#dissolvingGradient)" opacity="0.6"/>
+                            <text class="node-label" x="120" y="495" font-size="12">Endless Growth</text>
+                            <text class="node-sublabel" x="120" y="514">more is better</text>
+                        </g>
+                    </g>
+
+                    <!-- CENTRAL COHERENCE NODE -->
+                    <g class="mind-map-node mind-map-core" data-node-id="coherence" tabindex="0">
+                        <circle class="mind-map-core-glow" cx="500" cy="325" r="85" fill="url(#coreGradient)" filter="url(#coreGlow)"/>
+                        <circle cx="500" cy="325" r="68" fill="none" stroke="#f5c542" stroke-width="2.5" opacity="0.8"/>
+                        <circle cx="500" cy="325" r="50" fill="none" stroke="#4ecdc4" stroke-width="1.5" opacity="0.6"/>
+                        <text class="node-label" x="500" y="318" font-size="22" fill="#0a2e2e" font-weight="600">Coherence</text>
+                        <text class="node-sublabel" x="500" y="345" font-size="13" fill="#0a2e2e" opacity="0.8">the missing piece</text>
+                    </g>
+
+                    <!-- NEW STORY NODES (Right side, emerging) -->
+                    <g class="new-story-nodes">
+                        <!-- Regeneration -->
+                        <g class="mind-map-node new-story-node" data-node-id="regeneration" tabindex="0">
+                            <circle class="node-circle" cx="780" cy="120" r="52" fill="url(#emergingGradient)" filter="url(#nodeGlow)"/>
+                            <text class="node-label" x="780" y="115" font-size="14" fill="#0a2e2e">Regeneration</text>
+                            <text class="node-sublabel" x="780" y="135" font-size="12" fill="#0a2e2e" opacity="0.7">giving back more</text>
+                        </g>
+
+                        <!-- Interdependence -->
+                        <g class="mind-map-node new-story-node" data-node-id="interdependence" tabindex="0">
+                            <circle class="node-circle" cx="880" cy="325" r="52" fill="url(#emergingGradient)" filter="url(#nodeGlow)"/>
+                            <text class="node-label" x="880" y="318" font-size="12" fill="#0a2e2e">Interdependence</text>
+                            <text class="node-sublabel" x="880" y="340" font-size="12" fill="#0a2e2e" opacity="0.7">we are one</text>
+                        </g>
+
+                        <!-- Abundance -->
+                        <g class="mind-map-node new-story-node" data-node-id="abundance" tabindex="0">
+                            <circle class="node-circle" cx="780" cy="530" r="52" fill="url(#emergingGradient)" filter="url(#nodeGlow)"/>
+                            <text class="node-label" x="780" y="525" font-size="14" fill="#0a2e2e">Abundance</text>
+                            <text class="node-sublabel" x="780" y="547" font-size="12" fill="#0a2e2e" opacity="0.7">enough for all</text>
+                        </g>
+                    </g>
+
+                    <!-- PROTOCOL ACTION NODES (Inner ring) -->
+                    <g class="protocol-nodes">
+                        <!-- Sense Together -->
+                        <g class="mind-map-node protocol-node" data-node-id="sense-together" tabindex="0">
+                            <circle class="node-circle" cx="380" cy="150" r="38" fill="#0d4a4a" stroke="#d4a84b" stroke-width="2.5"/>
+                            <text class="node-label" x="380" y="145" font-size="13">Sense</text>
+                            <text class="node-sublabel" x="380" y="162" font-size="11">together</text>
+                        </g>
+
+                        <!-- See Together -->
+                        <g class="mind-map-node protocol-node" data-node-id="see-together" tabindex="0">
+                            <circle class="node-circle" cx="620" cy="150" r="38" fill="#0d4a4a" stroke="#d4a84b" stroke-width="2.5"/>
+                            <text class="node-label" x="620" y="145" font-size="13">See</text>
+                            <text class="node-sublabel" x="620" y="162" font-size="11">together</text>
+                        </g>
+
+                        <!-- Flow Together -->
+                        <g class="mind-map-node protocol-node" data-node-id="flow-together" tabindex="0">
+                            <circle class="node-circle" cx="380" cy="500" r="38" fill="#0d4a4a" stroke="#d4a84b" stroke-width="2.5"/>
+                            <text class="node-label" x="380" y="495" font-size="13">Flow</text>
+                            <text class="node-sublabel" x="380" y="512" font-size="11">resources</text>
+                        </g>
+
+                        <!-- Celebrate -->
+                        <g class="mind-map-node protocol-node" data-node-id="celebrate" tabindex="0">
+                            <circle class="node-circle" cx="620" cy="500" r="38" fill="#0d4a4a" stroke="#d4a84b" stroke-width="2.5"/>
+                            <text class="node-label" x="620" y="495" font-size="12">Celebrate</text>
+                            <text class="node-sublabel" x="620" y="512" font-size="11">& regenerate</text>
+                        </g>
+                    </g>
+
+                    <!-- LIVING ARCHITECTURE NODES (Outer edge) -->
+                    <g class="architecture-nodes">
+                        <!-- Bioregions -->
+                        <g class="mind-map-node" data-node-id="bioregions" tabindex="0">
+                            <circle class="node-circle" cx="920" cy="200" r="30" fill="#1a6b5c" stroke="#4ecdc4" stroke-width="2"/>
+                            <text class="node-label" x="920" y="203" font-size="10">Bioregions</text>
+                        </g>
+
+                        <!-- Guilds -->
+                        <g class="mind-map-node" data-node-id="guilds" tabindex="0">
+                            <circle class="node-circle" cx="950" cy="280" r="30" fill="#1a6b5c" stroke="#4ecdc4" stroke-width="2"/>
+                            <text class="node-label" x="950" y="283" font-size="11">Guilds</text>
+                        </g>
+
+                        <!-- Mycelium -->
+                        <g class="mind-map-node" data-node-id="mycelium" tabindex="0">
+                            <circle class="node-circle" cx="920" cy="450" r="30" fill="#1a6b5c" stroke="#4ecdc4" stroke-width="2"/>
+                            <text class="node-label" x="920" y="453" font-size="10">Mycelium</text>
+                        </g>
+                    </g>
+
+                    <!-- Transformation arrow/flow indicator -->
+                    <g class="transformation-indicator" opacity="0.6">
+                        <text x="300" y="80" fill="#8b5a5a" font-family="var(--font-serif)" font-size="14" font-style="italic" opacity="0.7">The Old Story</text>
+                        <text x="300" y="98" fill="#8b5a5a" font-size="11" opacity="0.5">dissolving...</text>
+
+                        <text x="720" y="80" fill="#4ecdc4" font-family="var(--font-serif)" font-size="14" font-style="italic">The New Myth</text>
+                        <text x="720" y="98" fill="#4ecdc4" font-size="11" opacity="0.7">emerging</text>
+
+                        <!-- Subtle transformation arrow -->
+                        <path d="M420,70 Q500,50 580,70" fill="none" stroke="#d4a84b" stroke-width="1.5" opacity="0.4" stroke-dasharray="3 3"/>
+                        <polygon points="580,65 590,70 580,75" fill="#d4a84b" opacity="0.4"/>
+                    </g>
+
+                    <!-- Animated flow particles -->
+                    <g class="flow-particles">
+                        <circle r="3" fill="#d4a84b" opacity="0">
+                            <animateMotion dur="4s" repeatCount="indefinite" begin="0s">
+                                <mpath href="#flowPath1"/>
+                            </animateMotion>
+                            <animate attributeName="opacity" values="0;1;1;0" dur="4s" repeatCount="indefinite"/>
+                        </circle>
+                        <circle r="3" fill="#4ecdc4" opacity="0">
+                            <animateMotion dur="5s" repeatCount="indefinite" begin="1s">
+                                <mpath href="#flowPath2"/>
+                            </animateMotion>
+                            <animate attributeName="opacity" values="0;1;1;0" dur="5s" repeatCount="indefinite"/>
+                        </circle>
+                        <circle r="2" fill="#f5c542" opacity="0">
+                            <animateMotion dur="3s" repeatCount="indefinite" begin="2s">
+                                <mpath href="#flowPath3"/>
+                            </animateMotion>
+                            <animate attributeName="opacity" values="0;1;1;0" dur="3s" repeatCount="indefinite"/>
+                        </circle>
+                    </g>
+
+                    <!-- Hidden paths for animation -->
+                    <defs>
+                        <path id="flowPath1" d="M500,325 Q580,280 650,200 Q720,150 780,120"/>
+                        <path id="flowPath2" d="M500,325 Q600,325 700,325 Q800,325 880,325"/>
+                        <path id="flowPath3" d="M500,325 Q580,370 650,450 Q720,500 780,530"/>
+                    </defs>
+                </svg>
+
+                <!-- Tooltip for node details -->
+                <div class="mind-map-tooltip">
+                    <h4>Node Title</h4>
+                    <p>Description goes here</p>
+                    <span class="tooltip-tag">Tag</span>
                 </div>
             </div>
+
+            <!-- Legend -->
+            <div class="mind-map-legend">
+                <div class="legend-item">
+                    <span class="legend-dot dissolving"></span>
+                    <span>Old Story (dissolving)</span>
+                </div>
+                <div class="legend-item">
+                    <span class="legend-dot coherence"></span>
+                    <span>Coherence (the bridge)</span>
+                </div>
+                <div class="legend-item">
+                    <span class="legend-dot emerging"></span>
+                    <span>New Myth (emerging)</span>
+                </div>
+                <div class="legend-item">
+                    <span class="legend-dot action"></span>
+                    <span>Protocol Actions</span>
+                </div>
+            </div>
+
+            <p class="interaction-hint">Hover or tap on any node to explore the transformation</p>
         </div>
     </section>
 
