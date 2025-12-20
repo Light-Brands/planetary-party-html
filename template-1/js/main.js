@@ -1,118 +1,105 @@
-// Planetary Party - Main JavaScript
+/**
+ * Template 1: Mystical Emergence - JavaScript
+ * Bioluminescent interactions and cosmic animations
+ */
 
-// Mobile Menu Toggle
-document.addEventListener('DOMContentLoaded', function() {
-    const mobileToggle = document.querySelector('.mobile-menu-toggle');
-    const navLinks = document.querySelector('.nav-links');
+// Mobile menu toggle
+const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+const navLinks = document.querySelector('.nav-links');
 
-    if (mobileToggle) {
-        mobileToggle.addEventListener('click', function() {
-            navLinks.classList.toggle('active');
-            const icon = this.textContent;
-            this.textContent = icon === '☰' ? '✕' : '☰';
-        });
-    }
-
-    // Close mobile menu when clicking a link
-    const navItems = document.querySelectorAll('.nav-links a');
-    navItems.forEach(item => {
-        item.addEventListener('click', () => {
-            if (window.innerWidth <= 768) {
-                navLinks.classList.remove('active');
-                if (mobileToggle) {
-                    mobileToggle.textContent = '☰';
-                }
-            }
-        });
+if (mobileMenuToggle) {
+    mobileMenuToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
     });
-
-    // Smooth scroll for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            const href = this.getAttribute('href');
-            if (href !== '#' && href !== '') {
-                e.preventDefault();
-                const target = document.querySelector(href);
-                if (target) {
-                    const headerOffset = 80;
-                    const elementPosition = target.getBoundingClientRect().top;
-                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-
-                    window.scrollTo({
-                        top: offsetPosition,
-                        behavior: 'smooth'
-                    });
-                }
-            }
-        });
-    });
-
-    // Scroll animations
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    };
-
-    const observer = new IntersectionObserver(function(entries) {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('fade-in-up');
-                observer.unobserve(entry.target);
-            }
-        });
-    }, observerOptions);
-
-    // Observe all feature cards, guild cards, and protocol steps
-    document.querySelectorAll('.feature-card, .guild-card, .protocol-step, .image-text-section').forEach(el => {
-        observer.observe(el);
-    });
-
-    // Header scroll effect
-    const header = document.querySelector('header');
-    let lastScroll = 0;
-
-    window.addEventListener('scroll', () => {
-        const currentScroll = window.pageYOffset;
-
-        if (currentScroll <= 0) {
-            header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.05)';
-        } else {
-            header.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.1)';
-        }
-
-        lastScroll = currentScroll;
-    });
-
-    // Add active state to current nav item
-    const currentLocation = window.location.pathname.split('/').pop() || 'index.html';
-    navItems.forEach(item => {
-        const href = item.getAttribute('href');
-        if (href === currentLocation || (href === 'index.html' && currentLocation === '')) {
-            item.style.fontWeight = '700';
-            item.style.color = '#2d5f4f';
-        }
-    });
-});
-
-// Parallax effect for hero section (optional enhancement)
-window.addEventListener('scroll', function() {
-    const scrolled = window.pageYOffset;
-    const heroContent = document.querySelector('.hero-content');
-    if (heroContent && scrolled < window.innerHeight) {
-        heroContent.style.transform = `translateY(${scrolled * 0.5}px)`;
-        heroContent.style.opacity = 1 - (scrolled / window.innerHeight);
-    }
-});
-
-// Image lazy loading fallback
-if ('loading' in HTMLImageElement.prototype) {
-    const images = document.querySelectorAll('img[loading="lazy"]');
-    images.forEach(img => {
-        img.src = img.dataset.src || img.src;
-    });
-} else {
-    // Fallback for browsers that don't support lazy loading
-    const script = document.createElement('script');
-    script.src = 'https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js';
-    document.body.appendChild(script);
 }
+
+// Close mobile menu when clicking a link
+document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+    });
+});
+
+// Smooth scrolling for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        const href = this.getAttribute('href');
+        if (href !== '#' && href !== '#0') {
+            e.preventDefault();
+            const target = document.querySelector(href);
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        }
+    });
+});
+
+// Header scroll effect
+const header = document.querySelector('header');
+let lastScroll = 0;
+
+window.addEventListener('scroll', () => {
+    const currentScroll = window.pageYOffset;
+
+    if (currentScroll > 100) {
+        header.classList.add('scrolled');
+    } else {
+        header.classList.remove('scrolled');
+    }
+
+    lastScroll = currentScroll;
+});
+
+// Scroll-triggered animations
+const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+};
+
+const observer = new IntersectionObserver(function(entries) {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('fade-in-up');
+            observer.unobserve(entry.target);
+        }
+    });
+}, observerOptions);
+
+// Observe elements for animation
+document.addEventListener('DOMContentLoaded', () => {
+    const animatedElements = document.querySelectorAll('.feature-card, .image-text-section, .protocol-step, .guild-card');
+    animatedElements.forEach(el => observer.observe(el));
+});
+
+// Active nav highlighting
+const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+document.querySelectorAll('.nav-links a').forEach(link => {
+    if (link.getAttribute('href') === currentPage ||
+        (currentPage === '' && link.getAttribute('href') === 'index.html')) {
+        link.style.color = 'var(--soft-cyan)';
+        link.style.textShadow = '0 0 10px var(--glow-green)';
+    }
+});
+
+// Dynamic mycelial network connections (advanced effect)
+function createMycelialEffect() {
+    const canvas = document.createElement('canvas');
+    canvas.style.position = 'fixed';
+    canvas.style.top = '0';
+    canvas.style.left = '0';
+    canvas.style.width = '100%';
+    canvas.style.height = '100%';
+    canvas.style.pointerEvents = 'none';
+    canvas.style.zIndex = '-1';
+    canvas.style.opacity = '0.1';
+
+    // This is optional - creates additional animated mycelial connections
+    // Uncomment if you want more dynamic visual effects
+    // document.body.appendChild(canvas);
+}
+
+// Call on load if you want the extra effect
+// createMycelialEffect();
