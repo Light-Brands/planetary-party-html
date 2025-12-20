@@ -8,8 +8,16 @@ const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
 const navLinks = document.querySelector('.nav-links');
 
 if (mobileMenuToggle) {
-    mobileMenuToggle.addEventListener('click', () => {
+    mobileMenuToggle.addEventListener('click', (e) => {
+        e.stopPropagation();
         navLinks.classList.toggle('active');
+
+        // Update toggle icon
+        if (navLinks.classList.contains('active')) {
+            mobileMenuToggle.innerHTML = '✕';
+        } else {
+            mobileMenuToggle.innerHTML = '☰';
+        }
     });
 }
 
@@ -17,8 +25,40 @@ if (mobileMenuToggle) {
 document.querySelectorAll('.nav-links a').forEach(link => {
     link.addEventListener('click', () => {
         navLinks.classList.remove('active');
+        if (mobileMenuToggle) {
+            mobileMenuToggle.innerHTML = '☰';
+        }
     });
 });
+
+// Close mobile menu when clicking outside
+document.addEventListener('click', (e) => {
+    if (navLinks && navLinks.classList.contains('active')) {
+        if (!navLinks.contains(e.target) && !mobileMenuToggle.contains(e.target)) {
+            navLinks.classList.remove('active');
+            if (mobileMenuToggle) {
+                mobileMenuToggle.innerHTML = '☰';
+            }
+        }
+    }
+});
+
+// Prevent body scroll when mobile menu is open
+if (navLinks) {
+    const observer = new MutationObserver((mutations) => {
+        mutations.forEach((mutation) => {
+            if (mutation.attributeName === 'class') {
+                if (navLinks.classList.contains('active')) {
+                    document.body.style.overflow = 'hidden';
+                } else {
+                    document.body.style.overflow = '';
+                }
+            }
+        });
+    });
+
+    observer.observe(navLinks, { attributes: true });
+}
 
 // Smooth scrolling for anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
