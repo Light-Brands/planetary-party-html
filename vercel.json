@@ -20,19 +20,5 @@
         }
       ]
     }
-  ],
-  "rewrites": [
-    {
-      "source": "/mystical",
-      "destination": "/templates/template-1-mystical.html"
-    },
-    {
-      "source": "/rooted",
-      "destination": "/templates/template-2-rooted.html"
-    },
-    {
-      "source": "/flow",
-      "destination": "/templates/template-3-flow.html"
-    }
   ]
 }
