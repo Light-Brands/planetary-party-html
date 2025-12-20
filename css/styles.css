@@ -156,6 +156,16 @@ nav {
     display: flex;
     gap: 2.5rem;
     list-style: none;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
 }
 
 .nav-links a {
@@ -166,6 +176,8 @@ nav {
     letter-spacing: 0.05em;
     transition: all 0.3s;
     position: relative;
+    display: inline-block;
+    line-height: 1;
 }
 
 .nav-links a::after {
