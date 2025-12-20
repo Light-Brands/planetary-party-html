@@ -213,6 +213,233 @@ function initTabs() {
 }
 
 // ============================================
+// IMAGE LIGHTBOX WITH ZOOM & PAN
+// ============================================
+class ImageLightbox {
+    constructor() {
+        this.currentZoom = 1;
+        this.minZoom = 1;
+        this.maxZoom = 5;
+        this.zoomStep = 0.5;
+        this.isDragging = false;
+        this.startX = 0;
+        this.startY = 0;
+        this.translateX = 0;
+        this.translateY = 0;
+        this.currentImage = null;
+
+        this.createLightbox();
+        this.initImageClickHandlers();
+    }
+
+    createLightbox() {
+        // Create lightbox HTML structure
+        const lightbox = document.createElement('div');
+        lightbox.className = 'lightbox';
+        lightbox.innerHTML = `
+            <div class="lightbox-content">
+                <div class="lightbox-image-container">
+                    <img src="" alt="" class="lightbox-image">
+                </div>
+            </div>
+            <button class="lightbox-close" aria-label="Close lightbox">✕</button>
+            <div class="lightbox-zoom-level">100%</div>
+            <div class="lightbox-caption"></div>
+            <div class="lightbox-controls">
+                <button class="lightbox-control-btn" data-action="zoom-out" aria-label="Zoom out">−</button>
+                <button class="lightbox-control-btn" data-action="reset" aria-label="Reset zoom">⟲</button>
+                <button class="lightbox-control-btn" data-action="zoom-in" aria-label="Zoom in">+</button>
+            </div>
+        `;
+
+        document.body.appendChild(lightbox);
+
+        this.lightbox = lightbox;
+        this.image = lightbox.querySelector('.lightbox-image');
+        this.imageContainer = lightbox.querySelector('.lightbox-image-container');
+        this.zoomLevel = lightbox.querySelector('.lightbox-zoom-level');
+        this.caption = lightbox.querySelector('.lightbox-caption');
+
+        this.bindEvents();
+    }
+
+    initImageClickHandlers() {
+        // Make content images clickable (exclude icons)
+        const imageSelectors = '.image-text-section img, .protocol-step img, .feature-card img, .summary-card img';
+        document.addEventListener('click', (e) => {
+            if (e.target.matches(imageSelectors)) {
+                e.preventDefault();
+                this.open(e.target);
+            }
+        });
+    }
+
+    bindEvents() {
+        // Close button
+        this.lightbox.querySelector('.lightbox-close').addEventListener('click', () => this.close());
+
+        // Click outside to close
+        this.lightbox.addEventListener('click', (e) => {
+            if (e.target === this.lightbox) {
+                this.close();
+            }
+        });
+
+        // Control buttons
+        this.lightbox.querySelectorAll('.lightbox-control-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const action = btn.dataset.action;
+                if (action === 'zoom-in') this.zoomIn();
+                else if (action === 'zoom-out') this.zoomOut();
+                else if (action === 'reset') this.reset();
+            });
+        });
+
+        // Keyboard controls
+        document.addEventListener('keydown', (e) => {
+            if (!this.lightbox.classList.contains('active')) return;
+
+            if (e.key === 'Escape') this.close();
+            else if (e.key === '+' || e.key === '=') this.zoomIn();
+            else if (e.key === '-' || e.key === '_') this.zoomOut();
+            else if (e.key === '0') this.reset();
+        });
+
+        // Mouse wheel zoom
+        this.imageContainer.addEventListener('wheel', (e) => {
+            e.preventDefault();
+            if (e.deltaY < 0) this.zoomIn();
+            else this.zoomOut();
+        });
+
+        // Drag to pan (mouse)
+        this.imageContainer.addEventListener('mousedown', (e) => this.startDrag(e));
+        this.imageContainer.addEventListener('mousemove', (e) => this.drag(e));
+        this.imageContainer.addEventListener('mouseup', () => this.endDrag());
+        this.imageContainer.addEventListener('mouseleave', () => this.endDrag());
+
+        // Touch support for mobile
+        this.imageContainer.addEventListener('touchstart', (e) => this.startDrag(e));
+        this.imageContainer.addEventListener('touchmove', (e) => this.drag(e));
+        this.imageContainer.addEventListener('touchend', () => this.endDrag());
+
+        // Pinch to zoom on mobile
+        let initialDistance = 0;
+        let initialZoom = 1;
+
+        this.imageContainer.addEventListener('touchstart', (e) => {
+            if (e.touches.length === 2) {
+                e.preventDefault();
+                initialDistance = this.getDistance(e.touches[0], e.touches[1]);
+                initialZoom = this.currentZoom;
+            }
+        });
+
+        this.imageContainer.addEventListener('touchmove', (e) => {
+            if (e.touches.length === 2) {
+                e.preventDefault();
+                const currentDistance = this.getDistance(e.touches[0], e.touches[1]);
+                const scale = currentDistance / initialDistance;
+                this.currentZoom = Math.max(this.minZoom, Math.min(this.maxZoom, initialZoom * scale));
+                this.updateTransform();
+            }
+        });
+    }
+
+    getDistance(touch1, touch2) {
+        const dx = touch2.clientX - touch1.clientX;
+        const dy = touch2.clientY - touch1.clientY;
+        return Math.sqrt(dx * dx + dy * dy);
+    }
+
+    startDrag(e) {
+        if (this.currentZoom <= 1) return;
+
+        this.isDragging = true;
+        this.imageContainer.classList.add('dragging');
+
+        const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+        const clientY = e.touches ? e.touches[0].clientY : e.clientY;
+
+        this.startX = clientX - this.translateX;
+        this.startY = clientY - this.translateY;
+    }
+
+    drag(e) {
+        if (!this.isDragging) return;
+
+        e.preventDefault();
+        const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+        const clientY = e.touches ? e.touches[0].clientY : e.clientY;
+
+        this.translateX = clientX - this.startX;
+        this.translateY = clientY - this.startY;
+
+        this.updateTransform();
+    }
+
+    endDrag() {
+        this.isDragging = false;
+        this.imageContainer.classList.remove('dragging');
+    }
+
+    open(img) {
+        this.currentImage = img;
+        this.image.src = img.src;
+        this.image.alt = img.alt;
+
+        // Set caption from alt text
+        this.caption.textContent = img.alt;
+        this.caption.style.display = img.alt ? 'block' : 'none';
+
+        // Reset state
+        this.reset();
+
+        // Show lightbox
+        this.lightbox.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+
+    close() {
+        this.lightbox.classList.remove('active');
+        document.body.style.overflow = '';
+        this.reset();
+    }
+
+    zoomIn() {
+        this.currentZoom = Math.min(this.maxZoom, this.currentZoom + this.zoomStep);
+        this.updateTransform();
+    }
+
+    zoomOut() {
+        this.currentZoom = Math.max(this.minZoom, this.currentZoom - this.zoomStep);
+        if (this.currentZoom === 1) {
+            this.translateX = 0;
+            this.translateY = 0;
+        }
+        this.updateTransform();
+    }
+
+    reset() {
+        this.currentZoom = 1;
+        this.translateX = 0;
+        this.translateY = 0;
+        this.updateTransform();
+    }
+
+    updateTransform() {
+        this.image.style.transform = `scale(${this.currentZoom}) translate(${this.translateX / this.currentZoom}px, ${this.translateY / this.currentZoom}px)`;
+        this.zoomLevel.textContent = `${Math.round(this.currentZoom * 100)}%`;
+
+        if (this.currentZoom > 1) {
+            this.imageContainer.classList.add('zoomed');
+        } else {
+            this.imageContainer.classList.remove('zoomed');
+        }
+    }
+}
+
+// ============================================
 // INITIALIZE ALL INTERACTIVE ELEMENTS
 // ============================================
 document.addEventListener('DOMContentLoaded', () => {
@@ -224,4 +451,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initAccordions();
     initToggles();
     initTabs();
+
+    // Initialize image lightbox
+    new ImageLightbox();
 });
