@@ -2003,8 +2003,11 @@ footer {
 
 /* Responsive */
 @media (max-width: 768px) {
-    .mind-map-container {
-        min-height: 500px;
+    /* Hide coherence mind map on mobile - too complex for small screens */
+    .mind-map-container,
+    .mind-map-legend,
+    .interaction-hint {
+        display: none;
     }
 
     .mind-map-svg {
