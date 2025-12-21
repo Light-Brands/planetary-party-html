@@ -2383,11 +2383,13 @@ footer {
     }
 
     .summary-label {
-        font-size: 1rem;
+        font-size: 1.35rem;
+        line-height: 1.3;
     }
 
     .summary-description {
-        font-size: 0.8rem;
+        font-size: 0.9rem;
+        line-height: 1.5;
     }
 
     /* Accordion mobile improvements for Guilds page */
@@ -2408,13 +2410,13 @@ footer {
     }
 
     .accordion-title {
-        font-size: 1.25rem;
+        font-size: 1.5rem;
         font-weight: 600;
         display: flex;
         align-items: center;
         gap: 0.5rem;
-        flex-wrap: nowrap;
-        line-height: 1.3;
+        flex-wrap: wrap;
+        line-height: 1.35;
     }
 
     .accordion-title .icon {
@@ -2482,11 +2484,13 @@ footer {
     }
 
     .summary-label {
-        font-size: 0.95rem;
+        font-size: 1.25rem;
+        line-height: 1.3;
     }
 
     .summary-description {
-        font-size: 0.75rem;
+        font-size: 0.85rem;
+        line-height: 1.5;
     }
 
     /* Accordion optimizations for small phones */
@@ -2500,9 +2504,10 @@ footer {
     }
 
     .accordion-title {
-        font-size: 1.1rem;
+        font-size: 1.35rem;
         font-weight: 600;
-        line-height: 1.25;
+        line-height: 1.35;
+        flex-wrap: wrap;
     }
 
     .accordion-title .icon {
