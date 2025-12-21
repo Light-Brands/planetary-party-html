@@ -1679,6 +1679,7 @@ footer {
     border: 1px solid rgba(78, 205, 196, 0.2);
     border-radius: 16px;
     padding: 2rem;
+    text-align: center;
     transition: all 0.3s ease;
 }
 
