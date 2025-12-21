@@ -741,6 +741,97 @@ h3 .icon {
     top: 0.45rem;
 }
 
+.feature-card.no-bullets ul,
+.feature-card.no-bullets ol {
+    padding-left: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.feature-card.no-bullets li::before {
+    display: none;
+    content: none;
+}
+
+.feature-card.no-bullets li {
+    padding-left: 0 !important;
+    list-style: none;
+    position: static;
+}
+
+/* Center last card when alone on row - desktop only */
+@media (min-width: 900px) {
+    .feature-grid.center-last-card {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .feature-grid.center-last-card > .feature-card:last-child:nth-child(3n + 1) {
+        grid-column: 2;
+    }
+}
+
+/* SVG clickable links */
+.svg-link {
+    cursor: pointer;
+}
+
+.svg-link:hover .node-circle {
+    filter: brightness(1.2);
+}
+
+/* Core Principles - Emphasized Stack Layout */
+.principles-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 800px;
+    margin: 2rem auto 0;
+}
+
+.principle-card {
+    background: linear-gradient(135deg, rgba(212, 168, 75, 0.15), rgba(78, 205, 196, 0.1));
+    border: 2px solid var(--gold);
+    border-radius: 16px;
+    padding: 2rem 3rem;
+    text-align: center;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.principle-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(212, 168, 75, 0.2);
+    background: linear-gradient(135deg, rgba(212, 168, 75, 0.2), rgba(78, 205, 196, 0.15));
+}
+
+.principle-card h3 {
+    color: var(--gold);
+    font-size: 1.6rem;
+    margin-bottom: 0.75rem;
+    font-family: var(--font-serif);
+}
+
+.principle-card p {
+    color: rgba(245, 242, 232, 0.9);
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .principle-card {
+        padding: 1.5rem 1.5rem;
+    }
+
+    .principle-card h3 {
+        font-size: 1.3rem;
+    }
+
+    .principle-card p {
+        font-size: 1rem;
+    }
+}
+
 /* ============================================
    IMAGE-TEXT SECTIONS
    ============================================ */

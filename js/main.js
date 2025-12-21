@@ -161,6 +161,34 @@ function initAccordions() {
             }
         });
     });
+
+    // Auto-expand accordion if navigating via hash
+    handleAccordionHash();
+    window.addEventListener('hashchange', handleAccordionHash);
+}
+
+function handleAccordionHash() {
+    const hash = window.location.hash;
+    if (hash) {
+        const targetElement = document.querySelector(hash);
+        if (targetElement && targetElement.classList.contains('accordion-item')) {
+            // Close all accordions first
+            const accordion = targetElement.closest('.accordion');
+            if (accordion) {
+                accordion.querySelectorAll('.accordion-item').forEach(item => {
+                    item.classList.remove('active');
+                });
+            }
+
+            // Open the target accordion
+            targetElement.classList.add('active');
+
+            // Scroll to it with a small delay to ensure it's expanded
+            setTimeout(() => {
+                targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }, 100);
+        }
+    }
 }
 
 // ============================================
