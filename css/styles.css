@@ -638,16 +638,50 @@ h3 .icon {
         0 8px 32px rgba(0, 0, 0, 0.3),
         0 0 60px rgba(78, 205, 196, 0.1);
     border: 1px solid rgba(78, 205, 196, 0.2);
+    display: block;
+    text-align: center;
 }
 
 .section-image img {
     width: 100%;
     height: auto;
     display: block;
+    margin: 0 auto;
 }
 
 .section-image.wide {
     max-width: 100%;
+}
+
+/* Image Placeholders (for prompts) */
+.image-placeholder {
+    background: linear-gradient(135deg, rgba(13, 74, 74, 0.4), rgba(10, 46, 46, 0.6));
+    border: 2px dashed rgba(78, 205, 196, 0.4);
+    border-radius: 16px;
+    padding: 2rem 1.5rem;
+    margin: 1.5rem 0;
+    text-align: left;
+    position: relative;
+}
+
+.image-placeholder-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--soft-cyan);
+    margin-bottom: 0.75rem;
+    font-weight: 500;
+}
+
+.image-placeholder-prompt {
+    font-size: 0.9rem;
+    color: rgba(245, 242, 232, 0.85);
+    line-height: 1.7;
+}
+
+.image-placeholder-prompt strong {
+    color: var(--gold);
+    font-weight: 600;
 }
 
 /* ============================================
@@ -686,12 +720,25 @@ h3 .icon {
 }
 
 .feature-card ul {
-    list-style-position: inside;
-    color: rgba(245, 242, 232, 0.7);
+    list-style: none;
+    padding-left: 0;
+    color: rgba(245, 242, 232, 0.85);
 }
 
 .feature-card li {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.75rem;
+    padding-left: 1.5rem;
+    position: relative;
+    line-height: 1.5;
+}
+
+.feature-card li::before {
+    content: "◆";
+    position: absolute;
+    left: 0;
+    color: var(--soft-cyan);
+    font-size: 0.5rem;
+    top: 0.45rem;
 }
 
 /* ============================================
