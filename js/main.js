@@ -162,8 +162,7 @@ function initAccordions() {
         });
     });
 
-    // Auto-expand accordion if navigating via hash
-    handleAccordionHash();
+    // Only expand accordion on hashchange (clicking a link), not on page load/back navigation
     window.addEventListener('hashchange', handleAccordionHash);
 }
 
@@ -190,6 +189,17 @@ function handleAccordionHash() {
         }
     }
 }
+
+// Handle accordion hash on fresh page load (not back/forward navigation)
+window.addEventListener('pageshow', (event) => {
+    if (!event.persisted) {
+        // Fresh page load - check if we came from a link with hash
+        const hash = window.location.hash;
+        if (hash && document.referrer && !document.referrer.includes(window.location.pathname)) {
+            handleAccordionHash();
+        }
+    }
+});
 
 // ============================================
 // TOGGLE FUNCTIONALITY
