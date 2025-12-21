@@ -1605,6 +1605,7 @@ footer {
 
 .tab-buttons {
     display: flex;
+    justify-content: center;
     gap: 1rem;
     border-bottom: 2px solid rgba(78, 205, 196, 0.2);
     margin-bottom: 2rem;
