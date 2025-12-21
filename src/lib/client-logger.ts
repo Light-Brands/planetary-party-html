@@ -10,7 +10,7 @@ interface LogContext {
   [key: string]: unknown;
 }
 
-const isDevelopment = process.env.NODE_ENV !== "production";
+const isDevelopment = process.env["NODE_ENV"] !== "production";
 
 function formatMessage(level: LogLevel, context: LogContext, message: string) {
   const timestamp = new Date().toISOString();

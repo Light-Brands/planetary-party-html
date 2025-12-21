@@ -1,7 +1,7 @@
 import pino from "pino";
 
-const isProduction = process.env.NODE_ENV === "production";
-const isTest = process.env.NODE_ENV === "test";
+const isProduction = process.env["NODE_ENV"] === "production";
+const isTest = process.env["NODE_ENV"] === "test";
 
 /**
  * Structured logger using pino.
