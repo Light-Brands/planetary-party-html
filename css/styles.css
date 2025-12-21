@@ -921,7 +921,7 @@ footer {
         gap: 1rem;
     }
 
-    /* Accordions - Better touch targets */
+    /* Accordions - Better touch targets and readable text */
     .accordion-header {
         padding: 1.25rem 1.5rem;
         min-height: 60px;
@@ -942,6 +942,29 @@ footer {
 
     .accordion-item.active .accordion-content {
         padding: 0 1.5rem 1.5rem 1.5rem;
+    }
+
+    /* Accordion content text - larger for mobile readability */
+    .accordion-content p {
+        font-size: 1.05rem;
+        line-height: 1.75;
+    }
+
+    .accordion-content ul,
+    .accordion-content ol {
+        font-size: 1.05rem;
+    }
+
+    .accordion-content li {
+        font-size: 1.05rem;
+        line-height: 1.7;
+        margin-bottom: 0.75rem;
+    }
+
+    .accordion-content h4 {
+        font-size: 1.15rem;
+        margin-top: 1.75rem;
+        margin-bottom: 1rem;
     }
 
     /* Protocol Steps */
@@ -1012,6 +1035,17 @@ footer {
         width: 52px;
         height: 52px;
     }
+
+    /* Fix icon bullet overlap on mobile - increase left padding for icon-prefixed list items */
+    li[style*="position: relative"] {
+        padding-left: 2.5rem !important;
+    }
+
+    li[style*="position: relative"] span[style*="position: absolute"] .icon,
+    li[style*="position: relative"] span[style*="position: absolute"] .icon-md {
+        width: 24px;
+        height: 24px;
+    }
 }
 
 /* Small Mobile (Portrait phones) */
@@ -1066,6 +1100,27 @@ footer {
         font-size: 1.1rem;
     }
 
+    /* Accordion content text - still readable on small phones */
+    .accordion-content p {
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+
+    .accordion-content ul,
+    .accordion-content ol {
+        font-size: 1rem;
+    }
+
+    .accordion-content li {
+        font-size: 1rem;
+        line-height: 1.65;
+        margin-bottom: 0.6rem;
+    }
+
+    .accordion-content h4 {
+        font-size: 1.1rem;
+    }
+
     .section-title {
         font-size: clamp(1.5rem, 7vw, 2rem);
     }
@@ -1082,6 +1137,17 @@ footer {
 
     .quote-section blockquote {
         font-size: clamp(1.1rem, 6vw, 1.75rem);
+    }
+
+    /* Maintain icon bullet fix on small phones */
+    li[style*="position: relative"] {
+        padding-left: 2.25rem !important;
+    }
+
+    li[style*="position: relative"] span[style*="position: absolute"] .icon,
+    li[style*="position: relative"] span[style*="position: absolute"] .icon-md {
+        width: 20px;
+        height: 20px;
     }
 }
 
@@ -2076,7 +2142,7 @@ footer {
         font-size: 1rem;
     }
 
-    /* Accordion mobile improvements */
+    /* Accordion mobile improvements for Guilds page */
     .accordion-header {
         flex-wrap: wrap;
     }
@@ -2087,7 +2153,7 @@ footer {
     }
 
     .accordion-title {
-        font-size: 1.1rem;
+        font-size: 1.15rem;
         display: flex;
         align-items: center;
         gap: 0.5rem;
@@ -2108,7 +2174,7 @@ footer {
     }
 
     .accordion-content h4 {
-        font-size: 1.1rem;
+        font-size: 1.15rem;
         margin-top: 1.5rem;
     }
 
@@ -2117,8 +2183,14 @@ footer {
     }
 
     .accordion-content li {
-        margin-bottom: 0.5rem;
-        font-size: 0.95rem;
+        margin-bottom: 0.6rem;
+        font-size: 1.05rem;
+        line-height: 1.7;
+    }
+
+    .accordion-content p {
+        font-size: 1.05rem;
+        line-height: 1.75;
     }
 }
 
@@ -2141,16 +2213,31 @@ footer {
     }
 
     .summary-label {
-        font-size: 0.9rem;
+        font-size: 0.95rem;
     }
 
     .accordion-title {
-        font-size: 1rem;
+        font-size: 1.05rem;
     }
 
     .accordion-number {
         width: 28px;
         height: 28px;
         font-size: 0.9rem;
+    }
+
+    /* Accordion content readable on small phones */
+    .accordion-content p {
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+
+    .accordion-content li {
+        font-size: 1rem;
+        line-height: 1.65;
+    }
+
+    .accordion-content h4 {
+        font-size: 1.1rem;
     }
 }
