@@ -67,10 +67,10 @@ export default function HomePage() {
           </div>
 
           <div className="grid gap-8 md:grid-cols-5">
-            {protocolPhases.map((phase, index) => (
+            {protocolPhases.map((phase) => (
               <div
                 key={phase.name}
-                className="stagger-${index + 1} group animate-fade-up text-center"
+                className="group animate-fade-up text-center"
               >
                 <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-forest-100 to-bioluminescent-teal/20 transition-transform group-hover:scale-110">
                   <span className="text-2xl">{phase.emoji}</span>

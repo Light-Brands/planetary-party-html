@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 /**
  * Client-side logger for browser environments.
  * Provides structured logging without pino dependencies.
