@@ -627,6 +627,30 @@ h3 .icon {
 }
 
 /* ============================================
+   SECTION IMAGES
+   ============================================ */
+.section-image {
+    margin: 3rem auto;
+    max-width: 800px;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow:
+        0 8px 32px rgba(0, 0, 0, 0.3),
+        0 0 60px rgba(78, 205, 196, 0.1);
+    border: 1px solid rgba(78, 205, 196, 0.2);
+}
+
+.section-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.section-image.wide {
+    max-width: 100%;
+}
+
+/* ============================================
    FEATURE CARDS & GRIDS
    ============================================ */
 .feature-grid {
