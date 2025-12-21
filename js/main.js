@@ -440,6 +440,179 @@ class ImageLightbox {
 }
 
 // ============================================
+// INTERACTIVE MIND MAP
+// ============================================
+class MindMapInteraction {
+    constructor() {
+        this.container = document.querySelector('.mind-map-container');
+        if (!this.container) return;
+
+        this.svg = this.container.querySelector('.mind-map-svg');
+        this.tooltip = this.container.querySelector('.mind-map-tooltip');
+        this.nodes = this.container.querySelectorAll('.mind-map-node');
+        this.activeNode = null;
+
+        this.nodeData = {
+            'coherence': {
+                title: 'Coherence',
+                description: 'The living architecture that allows us to sense together, see together, and flow resources toward what works.',
+                tag: 'The Missing Piece'
+            },
+            'extraction': {
+                title: 'Extraction',
+                description: 'Taking from the Earth and each other without reciprocity. A story of scarcity that breeds hoarding.',
+                tag: 'Dissolving'
+            },
+            'separation': {
+                title: 'Separation',
+                description: 'The illusion that we are separate from nature and each other. Competition over collaboration.',
+                tag: 'Dissolving'
+            },
+            'endless-growth': {
+                title: 'Endless Growth',
+                description: 'The belief that infinite growth is possible on a finite planet. Quantity over quality.',
+                tag: 'Dissolving'
+            },
+            'regeneration': {
+                title: 'Regeneration',
+                description: 'Giving back more than we take. Communities restoring land, building new economies, creating art that heals.',
+                tag: 'Emerging'
+            },
+            'interdependence': {
+                title: 'Interdependence',
+                description: 'Celebrating our connection with all life. Understanding that we are part of a living system.',
+                tag: 'Emerging'
+            },
+            'abundance': {
+                title: 'Abundance Through Coherence',
+                description: 'When communities align, resources flow naturally. Coordination creates surplus, not scarcity.',
+                tag: 'Emerging'
+            },
+            'sense-together': {
+                title: 'Sense Together',
+                description: 'Bioregional dashboards and community intelligence. Knowing what\'s happening across the network in real-time.',
+                tag: 'Protocol'
+            },
+            'see-together': {
+                title: 'See Together',
+                description: 'Shared maps and collective sensemaking. Understanding the whole system, not just our corner.',
+                tag: 'Protocol'
+            },
+            'flow-together': {
+                title: 'Flow Together',
+                description: 'Trust-based capital that moves like water—quickly, relationally—toward what the bioregion needs.',
+                tag: 'Protocol'
+            },
+            'celebrate': {
+                title: 'Celebrate',
+                description: 'Festivals as technology. Gatherings that leave behind regenerative infrastructure and strengthened bonds.',
+                tag: 'Protocol'
+            },
+            'bioregions': {
+                title: 'Bioregional Networks',
+                description: 'Place-based communities connected through shared protocols. Rooted yet networked.',
+                tag: 'Living Architecture'
+            },
+            'guilds': {
+                title: 'Guilds',
+                description: 'Nine specialized teams stewarding different dimensions—from storytelling to regenerative capital.',
+                tag: 'Living Architecture'
+            },
+            'mycelium': {
+                title: 'Mycelial Connections',
+                description: 'The underground network linking all efforts. Information and resources flowing where needed.',
+                tag: 'Living Architecture'
+            }
+        };
+
+        this.init();
+    }
+
+    init() {
+        this.bindNodeEvents();
+        this.animatePathParticles();
+    }
+
+    bindNodeEvents() {
+        this.nodes.forEach(node => {
+            const nodeId = node.dataset.nodeId;
+
+            node.addEventListener('mouseenter', (e) => this.showTooltip(nodeId, e));
+            node.addEventListener('mouseleave', () => this.hideTooltip());
+            node.addEventListener('focus', (e) => this.showTooltip(nodeId, e));
+            node.addEventListener('blur', () => this.hideTooltip());
+
+            // Touch support
+            node.addEventListener('touchstart', (e) => {
+                e.preventDefault();
+                if (this.activeNode === nodeId) {
+                    this.hideTooltip();
+                } else {
+                    this.showTooltip(nodeId, e);
+                }
+            });
+        });
+
+        // Close tooltip on outside click
+        document.addEventListener('click', (e) => {
+            if (!this.container.contains(e.target)) {
+                this.hideTooltip();
+            }
+        });
+    }
+
+    showTooltip(nodeId, event) {
+        const data = this.nodeData[nodeId];
+        if (!data) return;
+
+        this.activeNode = nodeId;
+
+        // Update tooltip content
+        this.tooltip.innerHTML = `
+            <h4>${data.title}</h4>
+            <p>${data.description}</p>
+            <span class="tooltip-tag">${data.tag}</span>
+        `;
+
+        // Position tooltip
+        const node = event.target.closest('.mind-map-node');
+        const nodeRect = node.getBoundingClientRect();
+        const containerRect = this.container.getBoundingClientRect();
+
+        let left = nodeRect.left - containerRect.left + nodeRect.width / 2 - 140;
+        let top = nodeRect.bottom - containerRect.top + 15;
+
+        // Keep tooltip within bounds
+        if (left < 10) left = 10;
+        if (left + 280 > containerRect.width) left = containerRect.width - 290;
+
+        // If too close to bottom, show above
+        if (top + 150 > containerRect.height) {
+            top = nodeRect.top - containerRect.top - 150;
+        }
+
+        this.tooltip.style.left = `${left}px`;
+        this.tooltip.style.top = `${top}px`;
+
+        this.tooltip.classList.add('active');
+    }
+
+    hideTooltip() {
+        this.tooltip.classList.remove('active');
+        this.activeNode = null;
+    }
+
+    animatePathParticles() {
+        // Create animated particles that flow along paths
+        const paths = this.svg.querySelectorAll('.path-main, .path-secondary');
+        paths.forEach((path, index) => {
+            // Add subtle animation variation
+            path.style.animationDelay = `${index * 0.2}s`;
+        });
+    }
+}
+
+// ============================================
 // INITIALIZE ALL INTERACTIVE ELEMENTS
 // ============================================
 document.addEventListener('DOMContentLoaded', () => {
@@ -454,4 +627,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Initialize image lightbox
     new ImageLightbox();
+
+    // Initialize mind map
+    new MindMapInteraction();
 });
