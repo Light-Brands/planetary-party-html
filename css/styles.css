@@ -1506,6 +1506,69 @@ footer {
     margin: 1.5rem 0 0.75rem 0;
 }
 
+/* Team Accordion Styles */
+.team-accordion .accordion-header {
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.team-header-content {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    flex: 1;
+}
+
+.team-header-text {
+    flex: 1;
+}
+
+.team-header-text .accordion-title {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+}
+
+.team-header-text .emphasis {
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+.team-photo-small {
+    flex-shrink: 0;
+}
+
+/* Mobile adjustments for team accordion */
+@media (max-width: 768px) {
+    .team-header-content {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .team-header-text .accordion-title {
+        font-size: 1.2rem;
+    }
+
+    .team-header-text .emphasis {
+        font-size: 0.85rem;
+    }
+
+    .team-accordion .accordion-header {
+        flex-wrap: wrap;
+        padding: 1rem 1.25rem;
+    }
+
+    .team-accordion .accordion-icon {
+        position: absolute;
+        right: 1.25rem;
+        top: 1rem;
+    }
+
+    .team-accordion .accordion-item {
+        position: relative;
+    }
+}
+
 /* Summary Cards - Quick Overview */
 .summary-card {
     background: linear-gradient(135deg, rgba(212, 168, 75, 0.1), rgba(78, 205, 196, 0.05));
