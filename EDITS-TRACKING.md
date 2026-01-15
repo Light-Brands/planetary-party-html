@@ -19,9 +19,9 @@ This document tracks all requested website edits from the January 14, 2025 feedb
 | Home Page | 2 | 2 | 0 | 0 |
 | Communities Page | 8 | 7 | 0 | 1 |
 | Guilds Page | 4 | 4 | 0 | 0 |
-| About Page | 8 | 7 | 0 | 1 |
+| About Page | 8 | 8 | 0 | 0 |
 | Protocol Page | 3 | 3 | 0 | 0 |
-| **TOTAL** | **28** | **24** | **0** | **4** |
+| **TOTAL** | **28** | **25** | **0** | **3** |
 
 ---
 
@@ -483,26 +483,25 @@ Bio coming soon
 **Priority:** High
 **Complexity:** Medium
 **Estimated time:** 30-45 minutes
-**Status:** [!] Blocked - awaiting image files from stakeholder
+**Status:** [x] Completed (2025-01-15)
 
-**Headshots needed for:**
-- [ ] Sydney Griffith - new headshot provided
-- [ ] Eslerh Oreste - new headshot provided
-- [ ] Juan Carlos Kaiten - new headshot provided (use "better" version)
-- [ ] Josephine Watson - new headshot provided
-- [ ] Susanna Choe - new headshot provided
-- [ ] Sheri Herndon - new headshot provided
-- [ ] Nadim Hamdan - new headshot provided
-- [ ] Jenny Heinze - new headshot provided
+**Headshots updated for:**
+- [x] Sydney Griffith - `images/bios/Sydney Griffith.png`
+- [x] Eslerh Oreste - `images/bios/Eslerh Oreste.png`
+- [x] Juan Carlos Kaiten - `images/bios/Juan Carlos Kaiten2.png` (using "better" version)
+- [x] Josephine Watson - `images/bios/Josephine Watson.png`
+- [x] Susanna Choe - `images/bios/Susanna Choe.png`
+- [x] Sheri Herndon - `images/bios/Sheri Herndon.png`
+- [x] Nadim Hamdan - `images/bios/Nadim Hamdan.png`
+- [x] Jenny Heinze - `images/bios/Jenny Heinze.png`
 
 **Tasks:**
-- [ ] Obtain headshot image files from stakeholder
-- [ ] Optimize images for web (consistent sizing, compression)
-- [ ] Upload to appropriate location (images folder or Supabase storage)
-- [ ] Update HTML to reference new images
-- [ ] Verify all images display correctly
+- [x] Obtain headshot image files from stakeholder (uploaded to images/bios/)
+- [x] Upload to appropriate location (images/bios folder)
+- [x] Update HTML to reference new images
+- [x] Replaced placeholder gradient divs with actual img tags using circular styling
 
-**Note:** Image files were referenced in feedback but actual files need to be provided separately. Placeholder gradient backgrounds are currently in use for all team member photos.
+**Implementation Notes:** All 8 team member photos have been added. Images are displayed as circular thumbnails (80px) with `object-fit: cover` styling for consistent appearance.
 
 ---
 
@@ -654,13 +653,13 @@ Related changes on communities page:
 - [x] 4.6 - Add 5-Phase Cycle section
 - [x] 4.8 - Update "What We Provide"
 
-### Chunk C: About Page Team Updates (2-3 hours)
+### Chunk C: About Page Team Updates (2-3 hours) ✅ COMPLETED
 Team section changes:
 - [x] 6.1 - Standardize title format
 - [x] 6.2 - Update Susanna's bio
 - [x] 6.3 - Add Jenny Heinze
 - [x] 6.4 - Add Sheri Herndon
-- [!] 6.5 - Add/update headshots (BLOCKED - requires image files from stakeholder)
+- [x] 6.5 - Add/update headshots - COMPLETED with all 8 team member photos
 
 ### Chunk D: About Page Other Sections (1-2 hours) ✅ COMPLETED
 Non-team about page changes:
@@ -690,11 +689,9 @@ Requires design decisions:
 ### Waiting on Stakeholder Input
 - [ ] 1.1 - What should the browser tab title say?
 - [ ] 1.2 - Approved visual direction for theme changes
-- [ ] 6.5 - Headshot image files need to be provided
 
 ### Dependencies
 - Chunk G depends on design decisions being made first
-- 6.5 (headshots) depends on receiving image files
 
 ---
 
@@ -711,6 +708,7 @@ Requires design decisions:
 | 2025-01-15 | SBClb | Chunk F | Added Contact Us navigation button to all pages with gold button styling |
 | 2025-01-15 | a9ZaN | Chunk G (partial) | Completed 3.2 (New Myth graphic improvements). Items 1.1 and 1.2 documented as awaiting stakeholder input. |
 | 2025-01-15 | 0fPtb | VALIDATION | Full validation of all implemented changes confirmed. See validation notes below. |
+| 2025-01-15 | F0Dex | Chunk C (complete) | Added all 8 team member bio photos from images/bios/ folder |
 
 ---
 
@@ -776,7 +774,7 @@ Requires design decisions:
 - ✅ **6.2 Susanna Choe Bio:** Verified - updated title and bio (lines 174-188)
 - ✅ **6.3 Jenny Heinze:** Verified - added with full bio (lines 261-289)
 - ✅ **6.4 Sheri Herndon:** Verified - added with "Bio coming soon" (lines 291-310)
-- ⏸️ **6.5 Headshots:** BLOCKED - awaiting image files from stakeholder
+- ✅ **6.5 Headshots:** COMPLETED - All 8 team member photos added from images/bios/ folder
 - ✅ **6.6 Partner Organizations:** Verified - "Early Partner Organizations: Kinship Earth, Mycelial Law, Bioregional Embassy, and Micelio Media" (line 384)
 - ✅ **6.7 Pathways Section:** Verified - "Write to Us" CTA (line 464), updated Funding text with "Share how you'd like to contribute" CTA (lines 491-505)
 - ✅ **6.8 FAQ Section:** Verified - all question/answer updates applied (lines 651-715)
@@ -790,10 +788,9 @@ Requires design decisions:
 - ❓ **1.1 Browser Tab Title:** PENDING - still shows "The Planetary Party | Mystical Emergence" - awaiting stakeholder decision
 - ❓ **1.2 Theme/Background:** PENDING - major design project awaiting stakeholder alignment
 
-**Summary:** 24 of 28 tasks completed. 4 remaining items are blocked awaiting stakeholder decisions or external resources:
+**Summary:** 25 of 28 tasks completed. 3 remaining items are blocked awaiting stakeholder decisions:
 1. Browser tab title decision (1.1)
 2. Theme/background imagery alignment (1.2)
-3. Headshot image files (6.5)
-4. Item 4.7 was "No action needed" (retain section)
+3. Item 4.7 was "No action needed" (retain section)
 
 ---
