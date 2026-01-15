@@ -2,7 +2,7 @@
 
 **Created:** 2025-01-14
 **Last Updated:** 2025-01-15
-**Status:** Planning Complete - Ready for Implementation
+**Status:** Implementation In Progress
 
 ---
 
@@ -16,12 +16,12 @@ This document tracks all requested website edits from the January 14, 2025 feedb
 |---------|-------------|-----------|-------------|---------|
 | Pre-Implementation Questions | 2 | 0 | 0 | 2 |
 | Site-Wide Changes | 1 | 1 | 0 | 0 |
-| Home Page | 2 | 0 | 0 | 2 |
-| Communities Page | 8 | 0 | 0 | 8 |
-| Guilds Page | 4 | 0 | 0 | 4 |
-| About Page | 8 | 0 | 0 | 8 |
-| Protocol Page | 3 | 0 | 0 | 3 |
-| **TOTAL** | **28** | **1** | **0** | **27** |
+| Home Page | 2 | 1 | 0 | 1 |
+| Communities Page | 8 | 7 | 0 | 1 |
+| Guilds Page | 4 | 4 | 0 | 0 |
+| About Page | 8 | 7 | 0 | 1 |
+| Protocol Page | 3 | 3 | 0 | 0 |
+| **TOTAL** | **28** | **23** | **0** | **5** |
 
 ---
 
@@ -116,9 +116,9 @@ These items require decisions before implementation work can begin.
 > "A bioregional coordination ecosystem aligning collective intelligence, regenerative enterprises, and long-horizon capital. Rooted in place and woven into a coherent global web, it transforms fragmented efforts into investable systems with measurable returns."
 
 **Tasks:**
-- [ ] Locate hero section in page.tsx
-- [ ] Replace heading and description text
-- [ ] Verify styling looks correct with new content
+- [x] Locate hero section in index.html
+- [x] Replace heading and description text
+- [x] Verify styling looks correct with new content
 
 ---
 
@@ -146,10 +146,11 @@ These items require decisions before implementation work can begin.
 **Priority:** Medium
 **Complexity:** Low
 **Estimated time:** 15 minutes
+**Status:** [x] Completed
 
 **Requirements:**
-- [ ] Convert bullet list to numbered list (1-6)
-- [ ] Apply text edits to list items:
+- [x] Convert bullet list to numbered list (1-6)
+- [x] Apply text edits to list items:
   1. Commit to implementing the Planetary Party Protocol
   2. Host a Planetary Party gathering (festival, assembly, action lab)
   3. Implement the Bioregional Intelligence Process
@@ -163,11 +164,12 @@ These items require decisions before implementation work can begin.
 **Priority:** Low
 **Complexity:** Low
 **Estimated time:** 5 minutes
+**Status:** [x] Completed
 
 **Current:** "We Scale Through Replication, Not Centralization"
 **New:** "We Scale Through Replication and Refinement, Not Centralization"
 
-- [ ] Update heading text
+- [x] Update heading text
 
 ---
 
@@ -175,11 +177,12 @@ These items require decisions before implementation work can begin.
 **Priority:** High
 **Complexity:** Low
 **Estimated time:** 10 minutes
+**Status:** [x] Completed
 
 **Requirement:** Remove the timeline showing bioregion activation by year (2026, 2027, & beyond boxes)
 
-- [ ] Locate and remove timeline section
-- [ ] Ensure surrounding content flows properly
+- [x] Locate and remove timeline section
+- [x] Ensure surrounding content flows properly
 
 ---
 
@@ -187,6 +190,7 @@ These items require decisions before implementation work can begin.
 **Priority:** High
 **Complexity:** Medium
 **Estimated time:** 30 minutes
+**Status:** [x] Completed
 
 **Remove (AI-generated content):**
 - All listed bioregions (Costa Rica, Southern California, The Andes, etc.)
@@ -199,9 +203,9 @@ These items require decisions before implementation work can begin.
 - Northeast of Turtle Island (United States)
 
 **Tasks:**
-- [ ] Remove all fake bioregion content
-- [ ] Add the four real pilot bioregions
-- [ ] Update any related graphics/maps if applicable
+- [x] Remove all fake bioregion content
+- [x] Add the four real pilot bioregions
+- [x] Update any related graphics/maps if applicable
 
 ---
 
@@ -209,13 +213,14 @@ These items require decisions before implementation work can begin.
 **Priority:** Medium
 **Complexity:** Low
 **Estimated time:** 10 minutes
+**Status:** [x] Completed
 
 **Remove:** "Upcoming gatherings & events" section (including 2026 gatherings, pre-party events, stay updated)
 
 **Replace with:** "Our schedule of upcoming events is coming soon"
 
-- [ ] Remove events section
-- [ ] Add placeholder text
+- [x] Remove events section
+- [x] Add placeholder text
 
 ---
 
@@ -223,6 +228,7 @@ These items require decisions before implementation work can begin.
 **Priority:** High
 **Complexity:** Medium
 **Estimated time:** 30 minutes
+**Status:** [x] Completed
 
 **Location:** After prerequisites section, before "Participant Benefits"
 
@@ -239,10 +245,10 @@ These items require decisions before implementation work can begin.
 > Learn more about the protocol and our expected outcomes
 
 **Tasks:**
-- [ ] Create new section with appropriate styling
-- [ ] Add 5 phases with descriptions
-- [ ] Add "Learn more" link (determine destination - likely /pages/protocol)
-- [ ] Ensure section placement is correct
+- [x] Create new section with appropriate styling
+- [x] Add 5 phases with descriptions
+- [x] Add "Learn more" link (determine destination - likely /pages/protocol)
+- [x] Ensure section placement is correct
 
 ---
 
@@ -256,6 +262,7 @@ These items require decisions before implementation work can begin.
 **Priority:** High
 **Complexity:** Medium
 **Estimated time:** 20 minutes
+**Status:** [x] Completed
 
 **New content:**
 
@@ -270,8 +277,8 @@ These items require decisions before implementation work can begin.
 > **Ceremony and integration** - inviting local and global elders, youth, and others to bring the spiritual and cultural dimension of coherence.
 
 **Tasks:**
-- [ ] Replace current "What We Provide" content
-- [ ] Maintain consistent formatting/styling
+- [x] Replace current "What We Provide" content
+- [x] Maintain consistent formatting/styling
 
 ---
 
@@ -283,16 +290,19 @@ These items require decisions before implementation work can begin.
 **Priority:** Medium
 **Complexity:** Medium
 **Estimated time:** 45-60 minutes
+**Status:** [x] Completed
 
 **Issue:** Two sections are redundant:
 - "Quick Overview: The Nine Guilds"
 - "The Nine Guilds: A Symphony of Vital Functions"
 
 **Tasks:**
-- [ ] Analyze both sections to determine best content to keep
-- [ ] Consolidate into single, comprehensive section
-- [ ] Remove duplicate section
-- [ ] Verify all guild information is preserved
+- [x] Analyze both sections to determine best content to keep
+- [x] Consolidate into single, comprehensive section
+- [x] Remove duplicate section
+- [x] Verify all guild information is preserved
+
+**Implementation Notes:** Removed the "Quick Overview" section entirely and kept the comprehensive accordion section. Renamed to simply "The Nine Guilds" and incorporated the tagline from the overview.
 
 ---
 
@@ -300,11 +310,14 @@ These items require decisions before implementation work can begin.
 **Priority:** Low
 **Complexity:** Low
 **Estimated time:** 10 minutes
+**Status:** [x] Completed
 
 **Remove:** Graphic under "The Anchor Circle: Upholding the Integrity of the Whole" entitled "ProSocial in Auroville"
 
-- [ ] Locate and remove the graphic
-- [ ] Ensure section still flows properly
+- [x] Locate and remove the graphic
+- [x] Ensure section still flows properly
+
+**Implementation Notes:** Removed the prosocial-framework.jpg image from the Anchor Circle section.
 
 ---
 
@@ -312,6 +325,7 @@ These items require decisions before implementation work can begin.
 **Priority:** High
 **Complexity:** High
 **Estimated time:** 60-90 minutes
+**Status:** [x] Completed
 
 **Issue:** The Anchor Circle and Core Fractal are described too similarly. They need to be clearly distinguished.
 
@@ -322,10 +336,15 @@ These items require decisions before implementation work can begin.
 **Notes:** There is overlap between these groups currently, but as the Protocol evolves, others will join the Anchor Circle to represent different guilds.
 
 **Tasks:**
-- [ ] Review current descriptions of both
-- [ ] Rewrite Anchor Circle description to emphasize its distinct role
-- [ ] Rewrite Core Fractal description to emphasize its distinct role
-- [ ] Ensure the relationship between them is clear
+- [x] Review current descriptions of both
+- [x] Rewrite Anchor Circle description to emphasize its distinct role
+- [x] Rewrite Core Fractal description to emphasize its distinct role
+- [x] Ensure the relationship between them is clear
+
+**Implementation Notes:**
+- Rewrote the Anchor Circle section as "The Guiding Light at the Center" - emphasizing its role as a council of Guild representatives
+- Rewrote the Core Fractal section as "The Founding Circle" - emphasizing its role as the original founders
+- Added a new "Relationship to the Anchor Circle" card explaining how both groups work together and will evolve over time
 
 ---
 
@@ -333,13 +352,16 @@ These items require decisions before implementation work can begin.
 **Priority:** Medium
 **Complexity:** Low
 **Estimated time:** 15 minutes
+**Status:** [x] Completed
 
 **Location:** Under "The Guilds Form the Nervous System of the Planetary Party" section, under "How to Join"
 
 **Requirements:**
-- [ ] Add button with text "Reach Out To Learn More"
-- [ ] Link to contact form: `/pages/about#contact`
-- [ ] Style consistently with other CTAs
+- [x] Add button with text "Reach Out To Learn More"
+- [x] Link to contact form: `/pages/about#contact`
+- [x] Style consistently with other CTAs
+
+**Implementation Notes:** Added a secondary button styled consistently with other CTAs in the "How to Join" feature card.
 
 ---
 
@@ -351,6 +373,7 @@ These items require decisions before implementation work can begin.
 **Priority:** High
 **Complexity:** Medium
 **Estimated time:** 30-45 minutes
+**Status:** [x] Completed (2025-01-15)
 
 **New format for all team members:**
 ```
@@ -370,8 +393,8 @@ Co-Founder, Permatours
 ```
 
 **Tasks:**
-- [ ] Update format for all existing team members
-- [ ] Add "Planetary Party Steward, Core Fractal Member" to all
+- [x] Update format for all existing team members
+- [x] Add "Planetary Party Steward, Core Fractal Member" to all
 
 ---
 
@@ -379,6 +402,7 @@ Co-Founder, Permatours
 **Priority:** High
 **Complexity:** Low
 **Estimated time:** 15 minutes
+**Status:** [x] Completed (2025-01-15)
 
 **New title line:**
 > Founder, Bioregional Embassy | Founding Steward, Planetary Party | Innovation, GloCha | Consultant, Kinship Earth
@@ -391,8 +415,8 @@ Co-Founder, Permatours
 > She is the founder of the Bioregional Embassy and serves as a consultant to Kinship Earth, partner of the Planetary Party, and Director of Innovation at GloCha Foundation New York, advancing place-based cooperation, climate action, and planetary stewardship bridging the bioregional movement with the UN's ecosystem.
 
 **Tasks:**
-- [ ] Update Susanna's title line
-- [ ] Replace Susanna's bio text
+- [x] Update Susanna's title line
+- [x] Replace Susanna's bio text
 
 ---
 
@@ -400,6 +424,7 @@ Co-Founder, Permatours
 **Priority:** High
 **Complexity:** Low
 **Estimated time:** 15 minutes
+**Status:** [x] Completed (2025-01-15)
 
 **Title format:**
 ```
@@ -418,9 +443,9 @@ Planetary Party Steward, Core Fractal Member
 > She is a global citizen supporting the establishing of financial and legal vessels locally, regionally and globally around the world to hold the work that is becoming, and works internationally to align funders, technologies, and communities into coherent spirals of regeneration
 
 **Tasks:**
-- [ ] Add Jenny Heinze to team section
-- [ ] Apply standard title format
-- [ ] Add bio text
+- [x] Add Jenny Heinze to team section
+- [x] Apply standard title format
+- [x] Add bio text
 
 ---
 
@@ -428,6 +453,7 @@ Planetary Party Steward, Core Fractal Member
 **Priority:** High
 **Complexity:** Low
 **Estimated time:** 10 minutes
+**Status:** [x] Completed (2025-01-15)
 
 **Requirements:**
 ```
@@ -437,9 +463,9 @@ Bio coming soon
 ```
 
 **Tasks:**
-- [ ] Add Sheri Herndon to team section
-- [ ] Apply standard title format
-- [ ] Add "Bio coming soon" placeholder
+- [x] Add Sheri Herndon to team section
+- [x] Apply standard title format
+- [x] Add "Bio coming soon" placeholder
 
 ---
 
@@ -447,6 +473,7 @@ Bio coming soon
 **Priority:** High
 **Complexity:** Medium
 **Estimated time:** 30-45 minutes
+**Status:** [!] Blocked - awaiting image files from stakeholder
 
 **Headshots needed for:**
 - [ ] Sydney Griffith - new headshot provided
@@ -465,7 +492,7 @@ Bio coming soon
 - [ ] Update HTML to reference new images
 - [ ] Verify all images display correctly
 
-**Note:** Image files were referenced in feedback but actual files need to be provided separately.
+**Note:** Image files were referenced in feedback but actual files need to be provided separately. Placeholder gradient backgrounds are currently in use for all team member photos.
 
 ---
 
@@ -479,7 +506,7 @@ Bio coming soon
 **New:** "Early Partner Organizations: Kinship Earth, Mycelial Law, Bioregional Embassy, and Micelio Media. More coming soon."
 
 **Tasks:**
-- [ ] Update partner organizations text
+- [x] Update partner organizations text
 
 ---
 
@@ -487,13 +514,14 @@ Bio coming soon
 **Priority:** High
 **Complexity:** Medium
 **Estimated time:** 30 minutes
+**Status:** [x] Completed
 
 **Under "Organizations" > "Co-Host & Integrate":**
-- [ ] Add CTA button: "Write to Us"
-- [ ] Link to contact form: `/pages/about#contact`
+- [x] Add CTA button: "Write to Us"
+- [x] Link to contact form: `/pages/about#contact`
 
 **Under "Provide Funding":**
-- [ ] Update text to:
+- [x] Update text to:
 > "Donors, foundations, impact investors, and others are invited to contribute in a variety of ways:
 > - Give towards a Bioregional Flow Fund
 > - Support technology development
@@ -501,11 +529,11 @@ Bio coming soon
 > - Sponsor specific gatherings or bioregions
 > - And more"
 
-- [ ] Add CTA button: "Share how you'd like to contribute here"
-- [ ] Link to contact form: `/pages/about#contact`
+- [x] Add CTA button: "Share how you'd like to contribute here"
+- [x] Link to contact form: `/pages/about#contact`
 
 **Remove:**
-- [ ] Remove "Partner with Us" button below the section
+- [x] Remove "Partner with Us" button below the section
 
 ---
 
@@ -513,6 +541,7 @@ Bio coming soon
 **Priority:** High
 **Complexity:** Medium
 **Estimated time:** 30 minutes
+**Status:** [x] Completed
 
 **Update "What is a Planetary Party?" answer:**
 > The Planetary Party is a living cultural practice and systems-change activation process that supports bioregions in coming into shared intention, trust, and collective stewardship of their future.
@@ -538,10 +567,10 @@ Bio coming soon
 > "Bioregional Flow Funds are trust-based, community-governed pools of capital that move quickly to grassroots leaders and projects based on bioregional priorities. No grant applications or burdensome reporting. Just relational accountability and rapid deployment."
 
 **Tasks:**
-- [ ] Update "What is a Planetary Party?" answer
-- [ ] Update festival question wording
-- [ ] Update Flow Funds question wording
-- [ ] Update Flow Funds answer
+- [x] Update "What is a Planetary Party?" answer
+- [x] Update festival question wording
+- [x] Update Flow Funds question wording
+- [x] Update Flow Funds answer
 
 ---
 
@@ -560,7 +589,7 @@ Bio coming soon
 > Engage with the Planetary Party Protocol through the resourcing pathway that feels most aligned for you — from philanthropy and investment to emerging financial tools and assets — supporting coordinated regeneration across bioregions.
 
 **Tasks:**
-- [ ] Update "For Funders" description text
+- [x] Update "For Funders" description text
 
 ---
 
@@ -573,7 +602,7 @@ Bio coming soon
 > Host a Planetary Party activation in your bioregion and bring people together to align priorities, catalyze action, and connect local efforts into a living global network. The Protocol offers shared frameworks, guidance, and collaborative support — while honoring local leadership, culture, and place.
 
 **Tasks:**
-- [ ] Update "For Communities" description text
+- [x] Update "For Communities" description text
 
 ---
 
@@ -589,52 +618,53 @@ Bio coming soon
 > Guild members contribute skills and IP, co-create infrastructure, and help the ecosystem evolve in practice.
 
 **Tasks:**
-- [ ] Update section heading to "For Partners"
-- [ ] Update description text
+- [x] Update section heading to "For Partners"
+- [x] Update description text
 
 ---
 
 ## Implementation Chunks (Recommended Work Sessions)
 
-### Chunk A: Quick Text Updates (1-2 hours)
+### Chunk A: Quick Text Updates (1-2 hours) ✅ COMPLETED
 Low complexity, high impact changes:
-- [ ] 3.1 - Home page hero text
-- [ ] 4.2 - Scaling heading update
-- [ ] 6.6 - Partner organizations update
-- [ ] 7.1 - For Funders text
-- [ ] 7.2 - For Communities text
-- [ ] 7.3 - For Partners text/heading
+- [x] 3.1 - Home page hero text
+- [x] 4.2 - Scaling heading update
+- [x] 6.6 - Partner organizations update
+- [x] 7.1 - For Funders text
+- [x] 7.2 - For Communities text
+- [x] 7.3 - For Partners text/heading
 
-### Chunk B: Communities Page Overhaul (2-3 hours)
+### Chunk B: Communities Page Overhaul (2-3 hours) - COMPLETED
 Related changes on communities page:
-- [ ] 4.1 - Number pilot bioregion items
-- [ ] 4.3 - Remove timeline
-- [ ] 4.4 - Replace bioregion listings
-- [ ] 4.5 - Replace events section
-- [ ] 4.6 - Add 5-Phase Cycle section
-- [ ] 4.8 - Update "What We Provide"
+- [x] 4.1 - Number pilot bioregion items
+- [x] 4.2 - Update scaling heading (added)
+- [x] 4.3 - Remove timeline
+- [x] 4.4 - Replace bioregion listings
+- [x] 4.5 - Replace events section
+- [x] 4.6 - Add 5-Phase Cycle section
+- [x] 4.8 - Update "What We Provide"
 
 ### Chunk C: About Page Team Updates (2-3 hours)
 Team section changes:
-- [ ] 6.1 - Standardize title format
-- [ ] 6.2 - Update Susanna's bio
-- [ ] 6.3 - Add Jenny Heinze
-- [ ] 6.4 - Add Sheri Herndon
-- [ ] 6.5 - Add/update headshots (requires image files)
+- [x] 6.1 - Standardize title format
+- [x] 6.2 - Update Susanna's bio
+- [x] 6.3 - Add Jenny Heinze
+- [x] 6.4 - Add Sheri Herndon
+- [!] 6.5 - Add/update headshots (BLOCKED - requires image files from stakeholder)
 
-### Chunk D: About Page Other Sections (1-2 hours)
+### Chunk D: About Page Other Sections (1-2 hours) ✅ COMPLETED
 Non-team about page changes:
-- [ ] 6.7 - Update pathways section + CTAs
-- [ ] 6.8 - Update FAQ section
+- [x] 6.7 - Update pathways section + CTAs
+- [x] 6.8 - Update FAQ section
 
-### Chunk E: Guilds Page Updates (2-3 hours)
+### Chunk E: Guilds Page Updates (2-3 hours) ✅ COMPLETED
 Guilds page changes:
-- [ ] 5.1 - Consolidate guild sections
-- [ ] 5.2 - Remove ProSocial graphic
-- [ ] 5.3 - Clarify Anchor Circle vs Core Fractal
-- [ ] 5.4 - Add "Reach Out" button
+- [x] 5.1 - Consolidate guild sections
+- [x] 5.2 - Remove ProSocial graphic
+- [x] 5.3 - Clarify Anchor Circle vs Core Fractal
+- [x] 5.4 - Add "Reach Out" button
 
-### Chunk F: Navigation & Site-Wide (30-60 minutes)
+### Chunk F: Navigation & Site-Wide (30-60 minutes) ✅ COMPLETED
 - [x] 2.1 - Add Contact Us navigation button ✓ Completed 2025-01-15
 
 ### Chunk G: Design/Visual Updates (Time TBD)
@@ -663,6 +693,11 @@ Requires design decisions:
 | Date | Session ID | Chunks Completed | Notes |
 |------|------------|------------------|-------|
 | 2025-01-15 | XNsoC | Planning | Created tracking document |
+| 2025-01-15 | 7h6VB | Chunk A | Completed all quick text updates (3.1, 4.2, 6.6, 7.1, 7.2, 7.3) |
+| 2025-01-15 | hZvKc | Chunk B | Communities page overhaul completed |
+| 2025-01-15 | zW3n8 | Chunk C (partial) | Completed 6.1-6.4, 6.5 blocked awaiting headshot images |
+| 2025-01-15 | 984A7 | Chunk D | Updated pathways section + CTAs, updated FAQ section |
+| 2025-01-15 | QcWJx | Chunk E | Completed all Guilds Page updates: consolidated guild sections, removed ProSocial graphic, clarified Anchor Circle vs Core Fractal, added "Reach Out" button |
 | 2025-01-15 | SBClb | Chunk F | Added Contact Us navigation button to all pages with gold button styling |
 | | | | |
 
