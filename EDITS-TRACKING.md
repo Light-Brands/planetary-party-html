@@ -15,13 +15,13 @@ This document tracks all requested website edits from the January 14, 2025 feedb
 | Section | Total Tasks | Completed | In Progress | Pending |
 |---------|-------------|-----------|-------------|---------|
 | Pre-Implementation Questions | 2 | 0 | 0 | 2 |
-| Site-Wide Changes | 1 | 0 | 0 | 1 |
+| Site-Wide Changes | 1 | 1 | 0 | 0 |
 | Home Page | 2 | 0 | 0 | 2 |
 | Communities Page | 8 | 0 | 0 | 8 |
 | Guilds Page | 4 | 0 | 0 | 4 |
 | About Page | 8 | 0 | 0 | 8 |
 | Protocol Page | 3 | 0 | 0 | 3 |
-| **TOTAL** | **28** | **0** | **0** | **28** |
+| **TOTAL** | **28** | **1** | **0** | **27** |
 
 ---
 
@@ -79,21 +79,23 @@ These items require decisions before implementation work can begin.
 
 ### 2.1 Add "Contact Us" Navigation Button
 **Files:**
+- `index.html` (navigation section)
 - `pages/about.html` (navigation section)
 - `pages/guilds.html` (navigation section)
 - `pages/communities.html` (navigation section)
 - `pages/protocol.html` (navigation section)
 - `pages/theory-of-change.html` (navigation section)
-- `src/app/layout.tsx` or navigation component
+- `css/styles.css` (button styling)
 
 **Priority:** Medium
 **Complexity:** Low
 **Estimated time:** 15-30 minutes
+**Status:** [x] Completed (2025-01-15)
 
 **Requirements:**
-- [ ] Add "Contact Us" button to top navigation bar across all pages
-- [ ] Link should navigate to: `/pages/about#contact`
-- [ ] Style consistently with existing navigation
+- [x] Add "Contact Us" button to top navigation bar across all pages
+- [x] Link should navigate to: `/pages/about#contact`
+- [x] Style consistently with existing navigation (gold button styling with `.nav-contact-btn` class)
 
 ---
 
@@ -633,7 +635,7 @@ Guilds page changes:
 - [ ] 5.4 - Add "Reach Out" button
 
 ### Chunk F: Navigation & Site-Wide (30-60 minutes)
-- [ ] 2.1 - Add Contact Us navigation button
+- [x] 2.1 - Add Contact Us navigation button ✓ Completed 2025-01-15
 
 ### Chunk G: Design/Visual Updates (Time TBD)
 Requires design decisions:
@@ -661,7 +663,7 @@ Requires design decisions:
 | Date | Session ID | Chunks Completed | Notes |
 |------|------------|------------------|-------|
 | 2025-01-15 | XNsoC | Planning | Created tracking document |
-| | | | |
+| 2025-01-15 | SBClb | Chunk F | Added Contact Us navigation button to all pages with gold button styling |
 | | | | |
 
 ---
