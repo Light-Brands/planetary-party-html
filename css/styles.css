@@ -202,6 +202,39 @@ nav {
     width: 100%;
 }
 
+/* Contact Us Navigation Button */
+.nav-contact-btn {
+    background: linear-gradient(135deg, var(--gold), var(--amber)) !important;
+    color: var(--deep-teal) !important;
+    padding: 0.5rem 1.25rem !important;
+    border-radius: 25px !important;
+    font-weight: 500 !important;
+    transition: all 0.3s ease !important;
+    text-decoration: none !important;
+    display: inline-block !important;
+}
+
+.nav-contact-btn::after {
+    display: none !important;
+}
+
+.nav-contact-btn:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 20px var(--glow-gold) !important;
+    color: var(--deep-teal) !important;
+    text-shadow: none !important;
+}
+
+/* Mobile nav contact button */
+@media (max-width: 768px) {
+    .nav-contact-btn {
+        width: auto !important;
+        text-align: center !important;
+        margin-top: 1rem !important;
+        padding: 0.75rem 1.5rem !important;
+    }
+}
+
 .mobile-menu-toggle {
     display: none;
     background: none;
