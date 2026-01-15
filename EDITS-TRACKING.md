@@ -19,9 +19,9 @@ This document tracks all requested website edits from the January 14, 2025 feedb
 | Home Page | 2 | 1 | 0 | 1 |
 | Communities Page | 8 | 7 | 0 | 1 |
 | Guilds Page | 4 | 0 | 0 | 4 |
-| About Page | 8 | 5 | 0 | 3 |
+| About Page | 8 | 7 | 0 | 1 |
 | Protocol Page | 3 | 3 | 0 | 0 |
-| **TOTAL** | **28** | **16** | **0** | **12** |
+| **TOTAL** | **28** | **18** | **0** | **10** |
 
 ---
 
@@ -497,13 +497,14 @@ Bio coming soon
 **Priority:** High
 **Complexity:** Medium
 **Estimated time:** 30 minutes
+**Status:** [x] Completed
 
 **Under "Organizations" > "Co-Host & Integrate":**
-- [ ] Add CTA button: "Write to Us"
-- [ ] Link to contact form: `/pages/about#contact`
+- [x] Add CTA button: "Write to Us"
+- [x] Link to contact form: `/pages/about#contact`
 
 **Under "Provide Funding":**
-- [ ] Update text to:
+- [x] Update text to:
 > "Donors, foundations, impact investors, and others are invited to contribute in a variety of ways:
 > - Give towards a Bioregional Flow Fund
 > - Support technology development
@@ -511,11 +512,11 @@ Bio coming soon
 > - Sponsor specific gatherings or bioregions
 > - And more"
 
-- [ ] Add CTA button: "Share how you'd like to contribute here"
-- [ ] Link to contact form: `/pages/about#contact`
+- [x] Add CTA button: "Share how you'd like to contribute here"
+- [x] Link to contact form: `/pages/about#contact`
 
 **Remove:**
-- [ ] Remove "Partner with Us" button below the section
+- [x] Remove "Partner with Us" button below the section
 
 ---
 
@@ -523,6 +524,7 @@ Bio coming soon
 **Priority:** High
 **Complexity:** Medium
 **Estimated time:** 30 minutes
+**Status:** [x] Completed
 
 **Update "What is a Planetary Party?" answer:**
 > The Planetary Party is a living cultural practice and systems-change activation process that supports bioregions in coming into shared intention, trust, and collective stewardship of their future.
@@ -548,10 +550,10 @@ Bio coming soon
 > "Bioregional Flow Funds are trust-based, community-governed pools of capital that move quickly to grassroots leaders and projects based on bioregional priorities. No grant applications or burdensome reporting. Just relational accountability and rapid deployment."
 
 **Tasks:**
-- [ ] Update "What is a Planetary Party?" answer
-- [ ] Update festival question wording
-- [ ] Update Flow Funds question wording
-- [ ] Update Flow Funds answer
+- [x] Update "What is a Planetary Party?" answer
+- [x] Update festival question wording
+- [x] Update Flow Funds question wording
+- [x] Update Flow Funds answer
 
 ---
 
@@ -633,10 +635,10 @@ Team section changes:
 - [x] 6.4 - Add Sheri Herndon
 - [!] 6.5 - Add/update headshots (BLOCKED - requires image files from stakeholder)
 
-### Chunk D: About Page Other Sections (1-2 hours)
+### Chunk D: About Page Other Sections (1-2 hours) ✅ COMPLETED
 Non-team about page changes:
-- [ ] 6.7 - Update pathways section + CTAs
-- [ ] 6.8 - Update FAQ section
+- [x] 6.7 - Update pathways section + CTAs
+- [x] 6.8 - Update FAQ section
 
 ### Chunk E: Guilds Page Updates (2-3 hours)
 Guilds page changes:
@@ -677,6 +679,7 @@ Requires design decisions:
 | 2025-01-15 | 7h6VB | Chunk A | Completed all quick text updates (3.1, 4.2, 6.6, 7.1, 7.2, 7.3) |
 | 2025-01-15 | hZvKc | Chunk B | Communities page overhaul completed |
 | 2025-01-15 | zW3n8 | Chunk C (partial) | Completed 6.1-6.4, 6.5 blocked awaiting headshot images |
+| 2025-01-15 | 984A7 | Chunk D | Updated pathways section + CTAs, updated FAQ section |
 | | | | |
 
 ---
