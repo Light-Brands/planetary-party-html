@@ -16,12 +16,12 @@ This document tracks all requested website edits from the January 14, 2025 feedb
 |---------|-------------|-----------|-------------|---------|
 | Pre-Implementation Questions | 2 | 0 | 0 | 2 |
 | Site-Wide Changes | 1 | 1 | 0 | 0 |
-| Home Page | 2 | 1 | 0 | 1 |
+| Home Page | 2 | 2 | 0 | 0 |
 | Communities Page | 8 | 7 | 0 | 1 |
 | Guilds Page | 4 | 4 | 0 | 0 |
 | About Page | 8 | 7 | 0 | 1 |
 | Protocol Page | 3 | 3 | 0 | 0 |
-| **TOTAL** | **28** | **23** | **0** | **5** |
+| **TOTAL** | **28** | **24** | **0** | **4** |
 
 ---
 
@@ -40,15 +40,19 @@ This document tracks all requested website edits from the January 14, 2025 feedb
 These items require decisions before implementation work can begin.
 
 ### 1.1 Browser Tab Title Issue
-**File:** `src/app/layout.tsx`
+**File:** `index.html` (line 7) and `src/app/layout.tsx`
 **Priority:** High
-**Status:** [ ] Pending discussion
+**Status:** [?] Pending stakeholder decision
 
 **Question from stakeholder:** The browser tab shows "The Planetary Party - Mystical Emergence" - will this be seen when the site is live? (We don't want that)
 
+**Current state:**
+- `index.html` has: `<title>The Planetary Party | Mystical Emergence</title>`
+- `src/app/layout.tsx` (Next.js app) has: `"Planet Party"` (already updated)
+
 **Action needed:**
-- [ ] Confirm what the title should say instead
-- [ ] Update the metadata title in layout.tsx
+- [?] Confirm what the title should say instead (Suggested: "The Planetary Party" without the tagline)
+- [ ] Update the title in index.html once decision is made
 
 ---
 
@@ -126,15 +130,21 @@ These items require decisions before implementation work can begin.
 **Priority:** Medium
 **Complexity:** Medium
 **Estimated time:** 30-60 minutes
+**Status:** [x] COMPLETED (2025-01-15, Session a9ZaN)
 
-**Location:** Graphic under "A New Myth of Humanity Is Emerging" heading
+**Location:** SVG mind map graphic under "A New Myth of Humanity Is Emerging" heading in `index.html`
 
 **Requirements:**
-- [ ] Make text bigger for better readability
-- [ ] Darken the light blue circles so white text is more readable
-- [ ] Test on different screen sizes
+- [x] Make text bigger for better readability
+- [x] Darken the light blue circles so white text is more readable
+- [ ] Test on different screen sizes (manual testing recommended)
 
-**Notes:** Need to identify if this is an SVG, image, or CSS-based graphic
+**Implemented changes:**
+- Increased font sizes throughout the SVG mind map (10-13px → 12-16px for labels, 11-13px for sublabels)
+- Darkened the `emergingGradient` colors from bright cyan (#6ee7e0/#4ecdc4) to deeper teal (#3dbdb5/#2a9d93)
+- Changed text color on new story nodes from dark (#0a2e2e) to white (#ffffff) for better contrast
+- Increased central "Coherence" node text from 22px to 26px
+- Increased header text ("The Old Story"/"The New Myth") from 22px to 26px
 
 ---
 
@@ -669,9 +679,9 @@ Guilds page changes:
 
 ### Chunk G: Design/Visual Updates (Time TBD)
 Requires design decisions:
-- [ ] 1.1 - Browser tab title (needs stakeholder input)
-- [ ] 1.2 - Theme/background imagery (major undertaking)
-- [ ] 3.2 - Improve "New Myth" graphic
+- [?] 1.1 - Browser tab title (needs stakeholder input - current title in index.html is "The Planetary Party | Mystical Emergence")
+- [ ] 1.2 - Theme/background imagery (major undertaking - needs stakeholder alignment, design mockups)
+- [x] 3.2 - Improve "New Myth" graphic - COMPLETED: Text enlarged, circles darkened for better readability
 
 ---
 
@@ -699,6 +709,7 @@ Requires design decisions:
 | 2025-01-15 | 984A7 | Chunk D | Updated pathways section + CTAs, updated FAQ section |
 | 2025-01-15 | QcWJx | Chunk E | Completed all Guilds Page updates: consolidated guild sections, removed ProSocial graphic, clarified Anchor Circle vs Core Fractal, added "Reach Out" button |
 | 2025-01-15 | SBClb | Chunk F | Added Contact Us navigation button to all pages with gold button styling |
+| 2025-01-15 | a9ZaN | Chunk G (partial) | Completed 3.2 (New Myth graphic improvements). Items 1.1 and 1.2 documented as awaiting stakeholder input. |
 | | | | |
 
 ---
@@ -706,5 +717,31 @@ Requires design decisions:
 ## Notes & Decisions
 
 *(Record important decisions, clarifications, or changes to scope here)*
+
+### 2025-01-15 (Session a9ZaN) - Chunk G Work
+
+**3.2 New Myth Graphic - Implementation Details:**
+- The graphic is an SVG mind map in `index.html` (lines 71-336)
+- Changes made to improve readability:
+  - All node text increased by 2-4px
+  - The "emerging" gradient (used on new story nodes: Regeneration, Interdependence, Abundance) was darkened from bright cyan to deeper teal colors
+  - Text on darkened nodes changed from dark (#0a2e2e) to white (#ffffff) for contrast
+  - Central "Coherence" node text increased from 22px to 26px
+  - Header labels increased from 22px to 26px
+
+**1.1 Browser Tab Title - Clarification:**
+- The issue is in `index.html` (static HTML site), not just the Next.js app
+- `index.html` currently shows: "The Planetary Party | Mystical Emergence"
+- The Next.js `layout.tsx` already uses "Planet Party" (different/shorter)
+- Stakeholder decision needed: What should the title be? Suggested: "The Planetary Party" (without tagline)
+
+**1.2 Theme/Background - Scope Assessment:**
+- This is a major design undertaking affecting the entire site
+- Current theme uses deep teal/cosmic colors with glowing effects
+- Changes would require:
+  1. Stakeholder alignment on new visual direction
+  2. Design mockups before implementation
+  3. Approved community photos (pending permissions)
+- Recommend treating this as a separate design sprint
 
 ---
