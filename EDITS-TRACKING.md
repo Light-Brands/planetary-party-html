@@ -19,9 +19,9 @@ This document tracks all requested website edits from the January 14, 2025 feedb
 | Home Page | 2 | 0 | 0 | 2 |
 | Communities Page | 8 | 0 | 0 | 8 |
 | Guilds Page | 4 | 0 | 0 | 4 |
-| About Page | 8 | 0 | 0 | 8 |
+| About Page | 8 | 4 | 0 | 4 |
 | Protocol Page | 3 | 0 | 0 | 3 |
-| **TOTAL** | **28** | **0** | **0** | **28** |
+| **TOTAL** | **28** | **4** | **0** | **24** |
 
 ---
 
@@ -349,6 +349,7 @@ These items require decisions before implementation work can begin.
 **Priority:** High
 **Complexity:** Medium
 **Estimated time:** 30-45 minutes
+**Status:** [x] Completed (2025-01-15)
 
 **New format for all team members:**
 ```
@@ -368,8 +369,8 @@ Co-Founder, Permatours
 ```
 
 **Tasks:**
-- [ ] Update format for all existing team members
-- [ ] Add "Planetary Party Steward, Core Fractal Member" to all
+- [x] Update format for all existing team members
+- [x] Add "Planetary Party Steward, Core Fractal Member" to all
 
 ---
 
@@ -377,6 +378,7 @@ Co-Founder, Permatours
 **Priority:** High
 **Complexity:** Low
 **Estimated time:** 15 minutes
+**Status:** [x] Completed (2025-01-15)
 
 **New title line:**
 > Founder, Bioregional Embassy | Founding Steward, Planetary Party | Innovation, GloCha | Consultant, Kinship Earth
@@ -389,8 +391,8 @@ Co-Founder, Permatours
 > She is the founder of the Bioregional Embassy and serves as a consultant to Kinship Earth, partner of the Planetary Party, and Director of Innovation at GloCha Foundation New York, advancing place-based cooperation, climate action, and planetary stewardship bridging the bioregional movement with the UN's ecosystem.
 
 **Tasks:**
-- [ ] Update Susanna's title line
-- [ ] Replace Susanna's bio text
+- [x] Update Susanna's title line
+- [x] Replace Susanna's bio text
 
 ---
 
@@ -398,6 +400,7 @@ Co-Founder, Permatours
 **Priority:** High
 **Complexity:** Low
 **Estimated time:** 15 minutes
+**Status:** [x] Completed (2025-01-15)
 
 **Title format:**
 ```
@@ -416,9 +419,9 @@ Planetary Party Steward, Core Fractal Member
 > She is a global citizen supporting the establishing of financial and legal vessels locally, regionally and globally around the world to hold the work that is becoming, and works internationally to align funders, technologies, and communities into coherent spirals of regeneration
 
 **Tasks:**
-- [ ] Add Jenny Heinze to team section
-- [ ] Apply standard title format
-- [ ] Add bio text
+- [x] Add Jenny Heinze to team section
+- [x] Apply standard title format
+- [x] Add bio text
 
 ---
 
@@ -426,6 +429,7 @@ Planetary Party Steward, Core Fractal Member
 **Priority:** High
 **Complexity:** Low
 **Estimated time:** 10 minutes
+**Status:** [x] Completed (2025-01-15)
 
 **Requirements:**
 ```
@@ -435,9 +439,9 @@ Bio coming soon
 ```
 
 **Tasks:**
-- [ ] Add Sheri Herndon to team section
-- [ ] Apply standard title format
-- [ ] Add "Bio coming soon" placeholder
+- [x] Add Sheri Herndon to team section
+- [x] Apply standard title format
+- [x] Add "Bio coming soon" placeholder
 
 ---
 
@@ -445,6 +449,7 @@ Bio coming soon
 **Priority:** High
 **Complexity:** Medium
 **Estimated time:** 30-45 minutes
+**Status:** [!] Blocked - awaiting image files from stakeholder
 
 **Headshots needed for:**
 - [ ] Sydney Griffith - new headshot provided
@@ -463,7 +468,7 @@ Bio coming soon
 - [ ] Update HTML to reference new images
 - [ ] Verify all images display correctly
 
-**Note:** Image files were referenced in feedback but actual files need to be provided separately.
+**Note:** Image files were referenced in feedback but actual files need to be provided separately. Placeholder gradient backgrounds are currently in use for all team member photos.
 
 ---
 
@@ -614,11 +619,11 @@ Related changes on communities page:
 
 ### Chunk C: About Page Team Updates (2-3 hours)
 Team section changes:
-- [ ] 6.1 - Standardize title format
-- [ ] 6.2 - Update Susanna's bio
-- [ ] 6.3 - Add Jenny Heinze
-- [ ] 6.4 - Add Sheri Herndon
-- [ ] 6.5 - Add/update headshots (requires image files)
+- [x] 6.1 - Standardize title format
+- [x] 6.2 - Update Susanna's bio
+- [x] 6.3 - Add Jenny Heinze
+- [x] 6.4 - Add Sheri Herndon
+- [!] 6.5 - Add/update headshots (BLOCKED - requires image files from stakeholder)
 
 ### Chunk D: About Page Other Sections (1-2 hours)
 Non-team about page changes:
@@ -661,7 +666,7 @@ Requires design decisions:
 | Date | Session ID | Chunks Completed | Notes |
 |------|------------|------------------|-------|
 | 2025-01-15 | XNsoC | Planning | Created tracking document |
-| | | | |
+| 2025-01-15 | zW3n8 | Chunk C (partial) | Completed 6.1-6.4, 6.5 blocked awaiting headshot images |
 | | | | |
 
 ---
