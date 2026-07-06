@@ -142,14 +142,11 @@ nav {
 }
 
 .logo-icon {
-    width: 40px;
-    height: 40px;
-    background: radial-gradient(circle, var(--gold) 30%, var(--emerald) 70%);
-    border-radius: 50%;
+    width: 44px;
+    height: 44px;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 0 20px var(--glow-gold);
 }
 
 .nav-links {
@@ -407,9 +404,12 @@ h3 .icon {
     filter: drop-shadow(0 0 12px rgba(212, 168, 75, 0.5));
 }
 
-/* Logo icon in header */
+/* Logo icon in header — Syd's Planetary Party Protocol badge, standalone */
 .logo-icon .icon {
-    filter: drop-shadow(0 0 20px rgba(212, 168, 75, 0.8));
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0 0 12px rgba(212, 168, 75, 0.55));
 }
 
 /* ============================================
@@ -1028,13 +1028,13 @@ footer {
     }
 
     .logo-icon {
-        width: 32px;
-        height: 32px;
+        width: 36px;
+        height: 36px;
     }
 
     .logo-icon .icon {
-        width: 24px;
-        height: 24px;
+        width: 100%;
+        height: 100%;
     }
 
     .nav-links {
